@@ -1,0 +1,203 @@
+<?xml version="2.1" encoding="ISO-8859-1"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd" [<!ENTITY ATLAS "<Package>Atlas</Package>">]>
+
+<Book Name="tomlib">                                        <!-- REQUIRED -->
+	
+	<!--
+	    The title page
+	    -->
+	<TitlePage>    
+		<!-- REQUIRED -->
+		<Title>                                             
+			<Package>The GAP Table Of Marks Library</Package>
+		</Title>
+		
+		<Subtitle>     	                                     <!-- OPTIONAL -->
+			<Br/>
+			
+			&nbsp;
+		</Subtitle>
+		
+		<Version>Version 1.2.2</Version> 
+		<!-- OPTIONAL -->
+		<Author> 
+			Liam Naughton<Br/>                <!-- REQUIRED -->
+			Goetz Pfeiffer<Br/>
+			&nbsp;
+			<Address>
+				School of Mathematics, Statistics and Applied Mathematics<Br/>
+				National University of Ireland Galway,<Br/>
+				Galway,<Br/>
+				Ireland.
+			</Address>
+			<Email> liam.naughton@nuigalway.ie, goetz.pfeiffer@nuigalway.ie</Email>
+			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
+		</Author> 
+		
+		<Date>September 2011</Date> 
+		<!-- OPTIONAL -->
+		
+		<Copyright> 
+			<!-- OPTIONAL -->
+			&copyright; 2011 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
+		</Copyright> 
+		
+		<Acknowledgements> 
+			<!-- OPTIONAL -->
+			<P/>
+			
+			
+			<P/>This documentation was prepared with the <Package>GAPDoc</Package> package 
+			by Frank Luebeck and Max Neunhoffer. 
+		</Acknowledgements>
+		
+	</TitlePage>
+	
+	
+	
+	<TableOfContents/>                                    <!-- OPTIONAL -->
+	
+	
+	
+	<!--
+	    The document
+	    -->
+	<Body>                                                <!-- REQUIRED -->
+		
+		
+  <Chapter>
+	  <Heading>The GAP Table of Marks Library</Heading>
+	  
+	  
+	  <Section><Heading>Tables Of Marks</Heading>
+		  
+		  The concept of a <E>Table of Marks</E><Index>table of marks</Index> was introduced by W.Burnside in his
+		  book ``Theory of Groups of Finite  Order'' <Cite Key="Bur55"/>. Therefore a table of marks is sometimes called a <E>Burnside matrix</E><Index>Burnside matrix</Index>.
+		  
+		  The table of marks of a finite group <M>G</M>  is a matrix whose rows and
+		  columns are labelled by the conjugacy classes of subgroups of <M>G</M>
+		  and where for two subgroups <M>H</M> and <M>K</M> the <M>(H, K)</M>&ndash;entry is
+		  the number of fixed points of <M>K</M> in the transitive action of <M>G</M>
+		  on the cosets of <M>H</M> in <M>G</M>.
+		  So the table of marks characterizes the set of all permutation
+		  representations of <M>G</M>.
+		  
+		  Moreover, the table of marks gives a compact description of the subgroup
+		  lattice of <M>G</M>, since from the numbers of fixed points the numbers of
+		  conjugates of a subgroup <M>K</M> contained in a subgroup <M>H</M> can be derived.
+		  
+		  For small groups the table of marks of <M>G</M> can be constructed directly in GAP by first computing the entire subgroup lattice of <M>G</M>. However, for larger groups this method is unfeasible. The GAP Table of Marks library provides access to several hundred table of marks and their maximal subgroups. 
+		 
+		  
+		
+		  
+	  </Section>
+
+	  <Section>
+		  <Heading>Installing The Table of Marks Library</Heading>
+		  
+		  Download the archives in your preferred format. Unpack the archives inside the pkg dirctory of your GAP installation.
+		 Load the package
+		<Log>
+gap&gt; LoadPackage("tomlib");
+true</Log>
+	  </Section>
+	  <Section>
+		  <Heading>Contents</Heading>
+		  TomLib contains several hundred tables of marks. For a complete list of the contents of the library do the following.
+<Log>
+gap&gt; names:=AllLibTomNames();;
+gap&gt; "A5" in names;
+true
+</Log>
+The current version of the tomlib contains the tables of marks of the groups listed below as well as the tables of many of their maximal subgroups 
+and automorphism groups.
+
+
+
+The Alternating groups <M>A_n</M>
+<List>
+<Item>  for <M> n = 5, 6, 7, 8, 9, 10, 11, 12, 13 </M>.</Item>
+</List>
+The Symmetric groups <M>S_n</M>
+<List>
+<Item>  for <M>n = 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 </M>.</Item>
+</List>
+The Linear groups 
+<M>L_{2}(n)</M> for
+<List>
+<Item> <M>n = 7, 8, 11, 13, 16, 17, 19, 23, 25, 27, 29, 31, 32, 37, 41, 43, 47, 49, 53</M></Item>
+<Item> <M>n =  59, 61, 64, 67, 71, 73, 79, 81, 83, 89, 97, 101, 103, 107, 109, 113, 121, 125 .</M></Item>
+</List>
+along with
+<List>
+<Item><M>L_{3}(4), L_{3}(3), L_{3}(5), L_{3}(7), L_{3}(9)</M></Item>
+<Item><M>L_{4}(3), L_{3}(8), L_{3}(11) </M>.</Item>
+</List>
+
+
+The Unitary groups 
+<List>
+<Item><M>U_{3}(3), U_{4}(3), U_{3}(5), U_{3}(4), U_{3}(11), U_{3}(7), U_{3}(8)</M></Item>
+<Item><M>U_{3}(9), U_{4}(2), U_{5}(2)</M></Item>
+</List>
+The Sporadic Groups
+<List>
+<Item> <M>HS, McL, He, J_1, J_2, J_3, M_{11}, M_{12}, M_{22}, M_{23}, M_{24} </M> </Item>
+</List>
+The names given to each subgroup are consistent with those used in Robert Wilon's atlas <Cite Key="AGR"/>
+For example if you wish to access the table of marks of the maximal subgroup <M>"5:4 \times A5"</M> of the Higman-Sims group do the following:
+<Log>
+gap&gt; TableOfMarks("5:4 x A5");
+TableOfMarks( "5:4 x A5" )
+</Log>
+</Section>
+
+
+<Section>
+<Heading>Administrative Functions</Heading>
+Here we document some of the administrative facilities for the the &GAP; library of tables of marks.
+
+<#Include Label="LIBTOMKNOWN">
+<#Include Label="IsLibTomRep">
+<#Include Label="TableOfMarksFromLibrary">
+<#Include Label="ConvertToLibTom">
+<#Include Label="SetActualLibFileName">
+<#Include Label="LIBTOM">
+<#Include Label="AllLibTomNames">
+<#Include Label="NamesLibTom">
+<#Include Label="NotifiedFusionsOfLibTom">
+<#Include Label="NotifiedFusionsToLibTom">
+<#Include Label="UnloadTableOfMarksData">
+</Section>
+<!--
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Standard Generators of Groups">
+<Heading>Standard Generators of Groups</Heading>
+
+<#Include Label="[1]{stdgen}">
+<#Include Label="StandardGeneratorsInfo:stdgen">
+<!-- %T  replace by an example for isom. type as soon as this is
+implemented! -->
+<#Include Label="HumanReadableDefinition">
+<#Include Label="StandardGeneratorsFunctions">
+<#Include Label="IsStandardGeneratorsOfGroup">
+<#Include Label="StandardGeneratorsOfGroup">
+<#Include Label="StandardGeneratorsInfo:tom">
+
+</Section>
+
+ </Chapter>
+ 
+  
+  
+</Body>
+
+<Bibliography Databases="bib.xml"/>
+<TheIndex/>  
+</Book>
+
+
+
+	  

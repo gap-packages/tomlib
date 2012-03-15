@@ -1,0 +1,462 @@
+  
+  [1X1 The GAP Table of Marks Library[0X
+  
+  
+  [1X1.1 Tables Of Marks[0X
+  
+  The  concept  of  a  [13XTable of Marks[0m was introduced by W.Burnside in his book
+  ``Theory  of Groups of Finite Order'' [Bur55]. Therefore a table of marks is
+  sometimes  called  a [13XBurnside matrix[0m. The table of marks of a finite group G
+  is  a matrix whose rows and columns are labelled by the conjugacy classes of
+  subgroups  of  G and where for two subgroups H and K the (H, K)–entry is the
+  number of fixed points of K in the transitive action of G on the cosets of H
+  in  G.  So  the  table  of  marks  characterizes  the set of all permutation
+  representations  of  G.  Moreover,  the  table  of  marks  gives  a  compact
+  description  of  the  subgroup lattice of G, since from the numbers of fixed
+  points  the  numbers of conjugates of a subgroup K contained in a subgroup H
+  can  be derived. For small groups the table of marks of G can be constructed
+  directly  in  GAP  by  first  computing  the  entire  subgroup lattice of G.
+  However, for larger groups this method is unfeasible. The GAP Table of Marks
+  library  provides access to several hundred table of marks and their maximal
+  subgroups.
+  
+  
+  [1X1.2 Installing The Table of Marks Library[0X
+  
+  Download  the  archives in your preferred format. Unpack the archives inside
+  the pkg dirctory of your GAP installation. Load the package
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> LoadPackage("tomlib");[0X
+    [4Xtrue[0X
+  [4X------------------------------------------------------------------[0X
+  
+  
+  [1X1.3 Contents[0X
+  
+  TomLib  contains several hundred tables of marks. For a complete list of the
+  contents of the library do the following.
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> names:=AllLibTomNames();;[0X
+    [4Xgap> "A5" in names;[0X
+    [4Xtrue[0X
+  [4X------------------------------------------------------------------[0X
+  
+  The current version of the tomlib contains the tables of marks of the groups
+  listed  below  as  well as the tables of many of their maximal subgroups and
+  automorphism groups. The Alternating groups A_n
+  
+  --    for n = 5, 6, 7, 8, 9, 10, 11, 12, 13.
+  
+  The Symmetric groups S_n
+  
+  --    for n = 4, 5, 6, 7, 8, 9, 10, 11, 12, 13.
+  
+  The Linear groups L_2(n) for
+  
+  --    n  = 7, 8, 11, 13, 16, 17, 19, 23, 25, 27, 29, 31, 32, 37, 41, 43, 47,
+        49, 53
+  
+  --    n  =  59,  61, 64, 67, 71, 73, 79, 81, 83, 89, 97, 101, 103, 107, 109,
+        113, 121, 125 .
+  
+  along with
+  
+  --    L_3(4), L_3(3), L_3(5), L_3(7), L_3(9)
+  
+  --    L_4(3), L_3(8), L_3(11).
+  
+  The Unitary groups
+  
+  --    U_3(3), U_4(3), U_3(5), U_3(4), U_3(11), U_3(7), U_3(8)
+  
+  --    U_3(9), U_4(2), U_5(2)
+  
+  The Sporadic Groups
+  
+  --    HS, McL, He, J_1, J_2, J_3, M_11, M_12, M_22, M_23, M_24
+  
+  The  names  given  to each subgroup are consistent with those used in Robert
+  Wilon's  atlas  [ATLAS] For example if you wish to access the table of marks
+  of  the  maximal  subgroup  "5:4  x  A5"  of  the  Higman-Sims  group do the
+  following:
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> TableOfMarks("5:4 x A5");[0X
+    [4XTableOfMarks( "5:4 x A5" )[0X
+  [4X------------------------------------------------------------------[0X
+  
+  
+  [1X1.4 Administrative Functions[0X
+  
+  Here  we  document  some  of  the  administrative facilities for the the [5XGAP[0m
+  library of tables of marks.
+  
+  [1X1.4-1 LIBTOMKNOWN[0m
+  
+  [2X> LIBTOMKNOWN________________________________________________[0Xglobal variable
+  
+  [10XLIBTOMKNOWN[0m  is  a record that controls the loading of data files of the [5XGAP[0m
+  library of tables of marks. It has the following components.
+  
+  [8X[10XACTUAL[0m[8X [0m
+        the   name   of   the   file   to  be  read  at  the  moment  (set  by
+        [10XSetActualLibFileName[0m),
+  
+  [8X[10XLOADSTATUS[0m[8X [0m
+        a  record whose components are names of files in the library of tables
+        of  marks,  with  value  a  list whose first entry is one of [10X"loaded"[0m,
+        [10X"unloaded"[0m,  [10X"userloaded"[0m  and  whose  second entry is an integer that
+        controls  when  the  corresponding tables of marks can be removed from
+        [5XGAP[0m,
+  
+  [8X[10XMAX[0m[8X [0m
+        [5XGAP[0m  remembers at most [10XMAX[0m of the previously loaded library files (the
+        default value is 10),
+  
+  [8X[10XUNLOAD[0m[8X [0m
+        is  it  allowed  to  remove previously loaded library files (is set to
+        [9Xtrue[0m by default),
+  
+  [8X[10XSTDGEN[0m[8X [0m
+        a  list  describing standard generators of almost simple groups in the
+        table of marks library.
+  
+  Additionally  the  names  of the files already loaded occur as components of
+  [10XLIBTOMKNOWN[0m; the corresponding values are given by the data of the files.
+  
+  [1X1.4-2 IsLibTomRep[0m
+  
+  [2X> IsLibTomRep( [0X[3Xobj[0X[2X ) _________________________________________[0XRepresentation
+  
+  Library  tables of marks have their own representation. [10XIsLibTomRep[0m tests if
+  [3Xobj[0m is a library representation.
+  
+  [1X1.4-3 TableOfMarksFromLibrary[0m
+  
+  [2X> TableOfMarksFromLibrary( [0X[3Xstring[0X[2X ) ________________________________[0Xfunction
+  [6XReturns:[0X  the table of marks with name [3Xstring[0m.
+  
+  [1X1.4-4 ConvertToLibTom[0m
+  
+  [2X> ConvertToLibTom( [0X[3Xrecord[0X[2X ) ________________________________________[0Xfunction
+  
+  [10XConvertToLibTom[0m     converts     a     record     with    components    from
+  [10XTableOfMarksComponents[0m  into  a  library  table  of  marks  object  with the
+  corresponding attribute values set.
+  
+  [1X1.4-5 SetActualLibFileName[0m
+  
+  [2X> SetActualLibFileName( [0X[3Xfilename[0X[2X ) _________________________________[0Xfunction
+  
+  Sets the file name for [3Xfilename[0m.
+  
+  [1X1.4-6 LIBTOM[0m
+  
+  [2X> LIBTOM( [0X[3Xarg[0X[2X ) ____________________________________________________[0Xfunction
+  [2X> AFLT( [0X[3Xsource, destination, fusion[0X[2X ) ______________________________[0Xfunction
+  [2X> ACLT( [0X[3Xidentifier, component, value[0X[2X ) _____________________________[0Xfunction
+  
+  The  library  format  of  a library table of marks is a call to the function
+  [10XLIBTOM[0m, with the arguments sorted as in [10XTableOfMarksComponents[0m .
+  
+  [10XAFLT[0m adds a fusion map [3Xvalue[0m from the table of marks with name [3Xsource[0m to the
+  table  of  marks with name [3Xdestination[0m. The fusion map is a list of positive
+  integers,  storing  at  position  i the position of the class in [3Xdestination[0m
+  that contains the subgroups in the i-th class of [3Xsource[0m.
+  
+  [10XACLT[0m adds the value [3Xvalue[0m of a component with name [3Xcomponent[0m to the table of
+  marks with identifier value [3Xidentifier[0m in the library of tables of marks.
+  
+  [1X1.4-7 AllLibTomNames[0m
+  
+  [2X> AllLibTomNames( [0X[3X[0X[2X ) _______________________________________________[0Xfunction
+  [6XReturns:[0X  a list containing all names of available library tables of marks.
+  
+  [1X1.4-8 NamesLibTom[0m
+  
+  [2X> NamesLibTom( [0X[3Xstring[0X[2X ) ___________________________________________[0Xattribute
+  [2X> NamesLibTom( [0X[3Xtom[0X[2X ) ______________________________________________[0Xattribute
+  [6XReturns:[0X  all  names  of  the library table [3Xtom[0m or of the library table with
+            name [3Xstring[0m
+  
+  [1X1.4-9 NotifiedFusionsOfLibTom[0m
+  
+  [2X> NotifiedFusionsOfLibTom( [0X[3Xtom[0X[2X ) __________________________________[0Xattribute
+  [2X> NotifiedFusionsOfLibTom( [0X[3Xstring[0X[2X ) _______________________________[0Xattribute
+  [2X> FusionsOfLibTom( [0X[3Xtom[0X[2X ) __________________________________________[0Xattribute
+  [2X> FusionsOfLibTom( [0X[3Xstring[0X[2X ) _______________________________________[0Xattribute
+  
+  Are  there  any  fusions from the library table of marks [3Xtom[0m or the table of
+  marks with name [3Xstring[0m into other library tables marks?
+  
+  [10XNotifiedFusionsOfLibTom[0m  returns  the  names  of  all  such tables of marks.
+  [10XFusionsOfLibTom[0m returns the complete fusion maps. For that the corresponding
+  library file has to be loaded.
+  
+  [1X1.4-10 NotifiedFusionsToLibTom[0m
+  
+  [2X> NotifiedFusionsToLibTom( [0X[3Xtom[0X[2X ) __________________________________[0Xattribute
+  [2X> NotifiedFusionsToLibTom( [0X[3Xstring[0X[2X ) _______________________________[0Xattribute
+  [2X> FusionsToLibTom( [0X[3Xtom[0X[2X ) __________________________________________[0Xattribute
+  [2X> FusionsToLibTom( [0X[3Xstring[0X[2X ) _______________________________________[0Xattribute
+  
+  Are  there any fusions from other library table of marks to [3Xtom[0m or the table
+  of marks with name [3Xstring[0m.
+  
+  [10XNotifiedFusionsToLibTom[0m  returns  the  names  of  all  such tables of marks.
+  [10XFusionsToLibTom[0m returns the complete fusion maps. For that, the correponding
+  library files have to be loaded.
+  
+  [1X1.4-11 UnloadTableOfMarksData[0m
+  
+  [2X> UnloadTableOfMarksData( [0X[3X[0X[2X ) _______________________________________[0Xfunction
+  
+  [10XUnloadTableOfMarksData[0m clears the cache of tables of marks. This can be used
+  to free up to several hundred megabytes of space in the current [5XGAP[0m session.
+  
+  
+  [1X1.5 Standard Generators of Groups[0X
+  
+  An  s-tuple of [13Xstandard generators[0m of a given group G is a vector (g_1, g_2,
+  ...,  g_s)  of elements g_i in G satisfying certain conditions (depending on
+  the isomorphism type of G) such that
+  
+  (1)   < g_1, g_2, ..., g_s > = G and
+  
+  (2)   the  vector  is unique up to automorphisms of G, i.e., for two vectors
+        (g_1,  g_2, ..., g_s) and (h_1, h_2, ..., h_s) of standard generators,
+        the map g_i -> h_i extends to an automorphism of G.
+  
+  For details about standard generators, see [Wil96].
+  
+  [1X1.5-1 StandardGeneratorsInfo[0m
+  
+  [2X> StandardGeneratorsInfo( [0X[3XG[0X[2X ) _____________________________________[0Xattribute
+  
+  When  called  with  the  group  [3XG[0m,  [2XStandardGeneratorsInfo[0m returns a list of
+  records  with  at  least  one of the components [10Xscript[0m and [10Xdescription[0m. Each
+  such  record defines [13Xstandard generators[0m of groups isomorphic to [3XG[0m, the i-th
+  record  is  referred  to  as  the  i-th  set of standard generators for such
+  groups.  The  value  of  [10Xscript[0m  is  a  dense list of lists, each encoding a
+  command that has one of the following forms.
+  
+  [8XA [13Xdefinition[0m[8X [ i, n, k ] or [ i, n ][0m
+        means  to search for an element of order n, and to take its k-th power
+        as candidate for the i-th standard generator (the default for k is 1),
+  
+  [8Xa [13Xrelation[0m[8X [ i_1, k_1, i_2, k_2, ..., i_m, k_m, n ] with m > 1[0m
+        means  a  check  whether the element g_{i_1}^{k_1} g_{i_2}^{k_2} cdots
+        g_{i_m}^{k_m}  has  order  n;  if  g_j  occurs then of course the j-th
+        generator must have been defined before,
+  
+  [8Xa [13Xrelation[0m[8X [ [ i_1, i_2, ..., i_m ], [3Xslp[0m[8X, n ][0m
+        means  a  check  whether  the  result of the straight line program [3Xslp[0m
+        (see [14X'Reference:  Straight  Line  Programs'[0m) applied to the candidates
+        g_{i_1},  g_{i_2},  ..., g_{i_m} has order n, where the candidates g_j
+        for the j-th standard generators must have been defined before,
+  
+  [8Xa [13Xcondition[0m[8X [ [ i_1, k_1, i_2, k_2, ..., i_m, k_m ], f, v ][0m
+        means   a   check   whether  the  [5XGAP[0m  function  in  the  global  list
+        [2XStandardGeneratorsFunctions[0m  ([14X1.5-3[0m) that is followed by the list f of
+        strings returns the value v when it is called with G and g_{i_1}^{k_1}
+        g_{i_2}^{k_2} cdots g_{i_m}^{k_m}.
+  
+  Optional components of the returned records are
+  
+  [8X[10Xgenerators[0m[8X[0m
+        a string of names of the standard generators,
+  
+  [8X[10Xdescription[0m[8X[0m
+        a  string describing the [10Xscript[0m information in human readable form, in
+        terms of the [10Xgenerators[0m value,
+  
+  [8X[10Xclassnames[0m[8X[0m
+        a  list  of  strings,  the  i-th entry being the name of the conjugacy
+        class  containing  the i-th standard generator, according to the [5XAtlas[0m
+        character table of the group (see [2XClassNames[0m ([14XReference: ClassNames[0m)),
+        and
+  
+  [8X[10XATLAS[0m[8X[0m
+        a boolean; [9Xtrue[0m means that the standard generators coincide with those
+        defined  in Rob Wilson's [5XAtlas[0m of Group Representations (see [ATLAS]),
+        and [9Xfalse[0m means that this property is not guaranteed.
+  
+  There  is  no  default  method  for  an arbitrary isomorphism type, since in
+  general the definition of standard generators is not obvious.
+  
+  The          function          [2XStandardGeneratorsOfGroup[0m         ([14XReference:
+  StandardGeneratorsOfGroup[0m)  can  be  used  to  find standard generators of a
+  given group isomorphic to [3XG[0m.
+  
+  The  [10Xgenerators[0m  and  [10Xdescription[0m  values,  if not known, can be computed by
+  [2XHumanReadableDefinition[0m ([14X1.5-2[0m).
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> StandardGeneratorsInfo( TableOfMarks( "L3(3)" ) );[0X
+    [4X[ rec( ATLAS := true, [0X
+    [4X      description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [0X
+    [4X      generators := "a, b", [0X
+    [4X      script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [0X
+    [4X          [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] ) ][0X
+  [4X------------------------------------------------------------------[0X
+  
+  [1X1.5-2 HumanReadableDefinition[0m
+  
+  [2X> HumanReadableDefinition( [0X[3Xinfo[0X[2X ) __________________________________[0Xfunction
+  [2X> ScriptFromString( [0X[3Xstring[0X[2X ) _______________________________________[0Xfunction
+  
+  Let  [3Xinfo[0m  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[0m
+  ([14X1.5-1[0m).   [2XHumanReadableDefinition[0m  returns  a  string  that  describes  the
+  definition  of  standard generators given by the [10Xscript[0m component of [3Xinfo[0m in
+  human  readable  form.  The  names  of  the  generators  are  taken from the
+  [10Xgenerators[0m   component   (default   names  [10X"a"[0m,  [10X"b"[0m  etc. are  computed  if
+  necessary), and the result is stored in the [10Xdescription[0m component.
+  
+  [2XScriptFromString[0m  does  the  converse  of  [2XHumanReadableDefinition[0m, i.e., it
+  takes  a string [3Xstring[0m as returned by [2XHumanReadableDefinition[0m, and returns a
+  corresponding [10Xscript[0m list.
+  
+  If   "condition"  lines  occur  in  the  script  (see [2XStandardGeneratorsInfo[0m
+  ([14X1.5-1[0m))   then   the   functions   that   occur   must   be   contained  in
+  [2XStandardGeneratorsFunctions[0m ([14X1.5-3[0m).
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> scr:= ScriptFromString( "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4" );[0X
+    [4X[ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [ 1, 1, 2, 1, 13 ], [0X
+    [4X  [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ][0X
+    [4Xgap> info:= rec( script:= scr );[0X
+    [4Xrec( script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [0X
+    [4X      [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] )[0X
+    [4Xgap> HumanReadableDefinition( info );[0X
+    [4X"|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4"[0X
+    [4Xgap> info;[0X
+    [4Xrec( description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [0X
+    [4X  generators := "a, b", [0X
+    [4X  script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [0X
+    [4X      [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] )[0X
+  [4X------------------------------------------------------------------[0X
+  
+  [1X1.5-3 StandardGeneratorsFunctions[0m
+  
+  [2X> StandardGeneratorsFunctions________________________________[0Xglobal variable
+  
+  [2XStandardGeneratorsFunctions[0m  is  a  list of even length. At position 2i-1, a
+  function  of two arguments is stored, which are expected to be a group and a
+  group  element.  At  position 2i a list of strings is stored such that first
+  inserting  a  generator name in all holes and then forming the concatenation
+  yields  a  string that describes the function at the previous position; this
+  string must contain the generator enclosed in round brackets [10X([0m and [10X)[0m.
+  
+  This   list  is  used  by  the  functions  [2XStandardGeneratorsInfo[0m  ([14X1.5-1[0m)),
+  [2XHumanReadableDefinition[0m ([14X1.5-2[0m), and [2XScriptFromString[0m ([14X1.5-2[0m). Note that the
+  lists at even positions must be pairwise different.
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> StandardGeneratorsFunctions{ [ 1, 2 ] };[0X
+    [4X[ function( G, g ) ... end, [ "|C(",, ")|" ] ][0X
+  [4X------------------------------------------------------------------[0X
+  
+  [1X1.5-4 IsStandardGeneratorsOfGroup[0m
+  
+  [2X> IsStandardGeneratorsOfGroup( [0X[3Xinfo, G, gens[0X[2X ) _____________________[0Xfunction
+  
+  Let  [3Xinfo[0m  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[0m
+  ([14X1.5-1[0m),  [3XG[0m  a  group,  and  [3Xgens[0m  a list of generators for [3XG[0m. In this case,
+  [2XIsStandardGeneratorsOfGroup[0m returns [9Xtrue[0m if [3Xgens[0m satisfies the conditions of
+  the [10Xscript[0m component of [3Xinfo[0m, and [9Xfalse[0m otherwise.
+  
+  Note  that  the result [9Xtrue[0m means that [3Xgens[0m is a list of standard generators
+  for  [3XG[0m  only if [3XG[0m has the isomorphism type for which [3Xinfo[0m describes standard
+  generators.
+  
+  [1X1.5-5 StandardGeneratorsOfGroup[0m
+  
+  [2X> StandardGeneratorsOfGroup( [0X[3Xinfo, G[, randfunc][0X[2X ) _________________[0Xfunction
+  
+  Let  [3Xinfo[0m  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[0m
+  ([14X1.5-1[0m),  and  [3XG[0m  a  group  of the isomorphism type for which [3Xinfo[0m describes
+  standard  generators. In this case, [2XStandardGeneratorsOfGroup[0m returns a list
+  of standard generators of [3XG[0m, see Section [14X1.5[0m.
+  
+  The optional argument [3Xrandfunc[0m must be a function that returns an element of
+  [3XG[0m when called with [3XG[0m; the default is [2XPseudoRandom[0m ([14XReference: PseudoRandom[0m).
+  
+  In      each      call      to     [2XStandardGeneratorsOfGroup[0m     ([14XReference:
+  StandardGeneratorsOfGroup[0m),  the [10Xscript[0m component of [3Xinfo[0m is scanned line by
+  line. [3Xrandfunc[0m is used to find an element of the prescribed order whenever a
+  definition  line  is  met,  and  for the relation and condition lines in the
+  [10Xscript[0m list, the current generator candidates are checked; if a condition is
+  not  fulfilled,  all  candidates  are  thrown away, and the procedure starts
+  again  with  the  first  line.  When  the  conditions  are  fulfilled  after
+  processing  the  last  line  of the [10Xscript[0m list, the standard generators are
+  returned.
+  
+  Note that if [3XG[0m has the wrong isomorphism type then [2XStandardGeneratorsOfGroup[0m
+  ([14XReference:  StandardGeneratorsOfGroup[0m) returns a list of elements in [3XG[0m that
+  satisfy  the  conditions  of  the  [10Xscript[0m component of [3Xinfo[0m if such elements
+  exist,  and  does not terminate otherwise. In the former case, obviously the
+  returned elements need not be standard generators of [3XG[0m.
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> a5:= AlternatingGroup( 5 );[0X
+    [4XAlt( [ 1 .. 5 ] )[0X
+    [4Xgap> info:= StandardGeneratorsInfo( TableOfMarks( "A5" ) )[1];[0X
+    [4Xrec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", [0X
+    [4X  generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ] )[0X
+    [4Xgap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (3,4,5) ] );[0X
+    [4Xtrue[0X
+    [4Xgap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (1,2,3) ] );[0X
+    [4Xfalse[0X
+    [4Xgap> s5:= SymmetricGroup( 5 );;[0X
+    [4Xgap> RepresentativeAction( s5, [ (1,3)(2,4), (3,4,5) ], [0X
+    [4X>        StandardGeneratorsOfGroup( info, a5 ), OnPairs ) <> fail;[0X
+    [4Xtrue[0X
+  [4X------------------------------------------------------------------[0X
+  
+  [1X1.5-6 StandardGeneratorsInfo[0m
+  
+  [2X> StandardGeneratorsInfo( [0X[3Xtom[0X[2X ) ___________________________________[0Xattribute
+  
+  For  a  table  of  marks  [3Xtom[0m,  a  stored  value  of  [2XStandardGeneratorsInfo[0m
+  ([14XReference:  StandardGeneratorsInfo!for tables of marks[0m) equals the value of
+  this  attribute  for  the  underlying group (see [2XUnderlyingGroup[0m ([14XReference:
+  UnderlyingGroup!for   tables  of  marks[0m))  of  [3Xtom[0m,  cf. Section [14X'Reference:
+  Standard Generators of Groups'[0m.
+  
+  In  this case, the [2XGeneratorsOfGroup[0m ([14XReference: GeneratorsOfGroup[0m) value of
+  the  underlying  group  G of [3Xtom[0m is assumed to be in fact a list of standard
+  generators   for   G;   So   one   should   be   careful  when  setting  the
+  [2XStandardGeneratorsInfo[0m value by hand.
+  
+  There  is no default method to compute the [2XStandardGeneratorsInfo[0m value of a
+  table of marks if it is not yet stored.
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> std:= StandardGeneratorsInfo( a5 );[0X
+    [4X[ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5",[0X
+    [4X      generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ][0X
+    [4X         ] ) ][0X
+    [4Xgap> # Now find standard generators of an isomorphic group.[0X
+    [4Xgap> g:= SL(2,4);;[0X
+    [4Xgap> repeat[0X
+    [4X>   x:= PseudoRandom( g );[0X
+    [4X> until Order( x ) = 2;[0X
+    [4Xgap> repeat  [0X
+    [4X>   y:= PseudoRandom( g );[0X
+    [4X> until Order( y ) = 3 and Order( x*y ) = 5;[0X
+    [4Xgap> # Compute a representative w.r.t. these generators.[0X
+    [4Xgap> RepresentativeTomByGenerators( a5, 4, [ x, y ] );[0X
+    [4XGroup([ [ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ],[0X
+    [4X  [ [ Z(2^2), Z(2^2)^2 ], [ Z(2^2)^2, Z(2^2) ] ] ])[0X
+    [4Xgap> # Show that the new generators are really good.[0X
+    [4Xgap> grp:= UnderlyingGroup( a5 );;[0X
+    [4Xgap> iso:= GroupGeneralMappingByImages( grp, g,[0X
+    [4X>              GeneratorsOfGroup( grp ), [ x, y ] );;[0X
+    [4Xgap> IsGroupHomomorphism( iso );[0X
+    [4Xtrue[0X
+    [4Xgap> IsBijective( iso );[0X
+    [4Xtrue[0X
+  [4X------------------------------------------------------------------[0X
+  

@@ -1,0 +1,6 @@
+tomlib/gap/tmadmin.tmd
+tomlib/gap/tmadmin.tmi
+tomlib/doc/tomdiff.pdf
+tomlib/doc/manual.pdf
+tomlib/doc/Makefile
+tomlib/doc/manual.six
