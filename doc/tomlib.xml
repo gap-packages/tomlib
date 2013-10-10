@@ -19,7 +19,7 @@
 			&nbsp;
 		</Subtitle>
 		
-		<Version>Version 1.2.2</Version> 
+		<Version>Version 1.2.3</Version> 
 		<!-- OPTIONAL -->
 		<Author> 
 			Liam Naughton<Br/>                <!-- REQUIRED -->
@@ -35,12 +35,12 @@
 			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
 		</Author> 
 		
-		<Date>September 2011</Date> 
+		<Date>October 2013</Date> 
 		<!-- OPTIONAL -->
 		
 		<Copyright> 
 			<!-- OPTIONAL -->
-			&copyright; 2011 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
+			&copyright; 2013 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
 		</Copyright> 
 		
 		<Acknowledgements> 
@@ -144,13 +144,13 @@ The Unitary groups
 </List>
 The Sporadic Groups
 <List>
-<Item> <M>HS, McL, He, J_1, J_2, J_3, M_{11}, M_{12}, M_{22}, M_{23}, M_{24} </M> </Item>
+<Item> <M>Co_3, HS, McL, He, J_1, J_2, J_3, M_{11}, M_{12}, M_{22}, M_{23}, M_{24} </M> </Item>
 </List>
-The names given to each subgroup are consistent with those used in Robert Wilon's atlas <Cite Key="AGR"/>
+The names given to each subgroup are consistent with those used in Robert Wilson's atlas <Cite Key="AGR"/>
 For example if you wish to access the table of marks of the maximal subgroup <M>"5:4 \times A5"</M> of the Higman-Sims group do the following:
 <Log>
-gap&gt; TableOfMarks("5:4 x A5");
-TableOfMarks( "5:4 x A5" )
+gap&gt; TableOfMarks("5:4xA5");
+TableOfMarks( "5:4xA5" )
 </Log>
 </Section>
 

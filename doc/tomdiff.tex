@@ -1,0 +1,362 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%W  tomdiff.tex           GAP 4 package `tomlib'                Thomas Breuer
+%%
+%H  @(#)$Id: tomdiff.tex,v 1.6 2008/11/26 09:20:47 gap Exp $
+%%
+%Y  Copyright (C)  2003,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
+%%
+%%  Plain TeX file, format copied from Simon Norton's famous lists of
+%%  ATLAS Improvements
+%%
+
+\parskip 1ex plus 0.5ex minus 0.5ex
+\parindent0pt
+
+\font\sf=cmss10
+\def\CAS{{\sf CAS}}
+\def\GAP{{\sf GAP}}
+\def\MOC{{\sf MOC}}
+
+%\def\contrib#1{(contributed #1)}
+\def\contrib#1{}
+
+\def\tthdump#1{#1}
+%%tth: \def\strut{}
+%%tth: \def\colon{:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tthdump{\centerline{\bf Changes in the {\GAP} Library of Tables of Marks}}
+%%tth: \title{Changes in the GAP Library of Tables of Marks}
+
+\bigbreak
+
+%%tth: \begin{html} <body bgcolor="FFFFFF"> \end{html}
+
+This list contains the changes in the {\GAP} Library of Tables of Marks
+since the release of TomLib~1.0 (together with {\GAP}~4.3) in May 2002.
+We denote mathematical errors by {\bf ***} and new information
+by {\bf NEW}\null.
+We use {\bf C} to denote changes that are not obviously corrections;
+the number of these changes is kept small.
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.1.1 (December 2003)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+***&{^3}D_4(2)&:&The derived subgroups for the classes $2847$ and $2848$
+were corrected, they are in the classes $2823$ and $2827$, respectively
+(not $2847$ and $2848$)
+\contrib{by Thomas Breuer}.\cr
+***&&:&The derived subgroups for the last classes in the maximal
+subgroups $S_3 \times L_2(8)$ and $(7 \times L_2(7)):3$ were corrected,
+they are in the last but one class not in the last
+\contrib{by Thomas Breuer}.\cr
+***&Co_3&:&The derived subgroups for the classes $2018$, $2318$, and $2457$
+in $Co_3$ were corrected, they are in the classes $1435$, $2048$, and $2442$,
+respectively (not $2018$, $2318$, and $2457$)
+\contrib{by Thomas Breuer}.\cr
+***&&:&The derived subgroups for the last classes in the maximal subgroups
+$2 \times M_{12}$, $S_3 \times L_2(8):3$, and $A_4 \times S_5$ were
+corrected, they are in the classes $514$, $139$, and $138$, respectively
+(not $515$, $144$, and $146$)
+\contrib{by Thomas Breuer}.\cr
+***&L_3(4)&:&The derived subgroups for the class $199$ in $3.L_3(4).2_3$
+were corrected, they are in the class $198$ not $199$
+\contrib{by Thomas Breuer}.\cr
+***&&:&The generators for the representative of the class $706$ in
+$2^2.L_3(4).2_2$ were replaced;
+the former generators belonged to a group in class $705$
+\contrib{by Thomas Breuer}.\cr
+***&O_8^-(2)&:&The straight line programs were corrected;
+up to now, the corresponding data stored in the table did not describe
+valid straight line programs
+\contrib{by Thomas Breuer}.\cr
+***&&:&The derived subgroups for the last class in the maximal
+subgroup $(S_3 \times S_3 \times A_5):2$ of $O_8^-(2)$ were corrected,
+they are in the class $362$ not $368$
+\contrib{by Thomas Breuer}.\cr
+***&U_3(4)&:&The derived subgroups for the class $80$ in $U_3(4).2$
+were corrected, they are in the class $79$ not $80$
+\contrib{by Thomas Breuer}.\cr
+***&U_4(2)&:&The generators for the representative of the class $110$
+in the maximal subgroup $2.(A_4 \times A_4).2.2$ of $U_4(2).2$ were replaced;
+the former generators belonged to a group of order $24$ not $12$,
+which was conjugate to the representative of class $152$
+\contrib{by Thomas Breuer}.\cr
+***&U_4(3)&:&The generators for the representatives of the classes $575$ and
+$595$ in $U_4(3).2_1$ were replaced; the former generators belonged to groups
+of order $192$ not $96$, which were conjugate to the representative of class
+$709$
+\contrib{by Thomas Breuer}.\cr}
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.1.2 (February 2004)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+***&O_8^-(2)&:&The derived subgroups for the class $5269$ were corrected,
+they are in the class $5108$ not $5269$
+\contrib{by Thomas Breuer}.\cr
+***&&:&The fusion from the table of marks of the maximal subgroup
+$(A_8 \times 3):2$ was corrected
+\contrib{by Thomas Breuer}.\cr}
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.1.3 (September 2007)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+NEW&A_{12}&:&The table of marks of $S_{12}$ was added
+\contrib{by G\"otz Pfeiffer}.\cr
+NEW&A_{13}&:&The table of marks of $A_{13}$ was added
+\contrib{by G\"otz Pfeiffer}.\cr}
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.1.4 (November 2008)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+***&A_{12}&:&The underlying group of the table of marks of $S_{12}$ was
+in fact $S_{13}$, acting on $13$ points;
+moreover, it had the group order of $S_{12}$ stored
+\contrib{by Joe Bohanon}.\cr}
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%{\bf Since the Release of TomLib~1.1.4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.2.1 (April 2011)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+NEW&A_{13}&:&The table of marks of $S_{13}$ and the fusion map into it from $A_{13}$ was added
+\contrib{by Liam Naughton}.\cr
+NEW&HS&:&The table of marks of $HS.2$ and the fusion map into it from $HS$ was added
+\contrib{by Liam Naughton}.\cr
+NEW&He&:&The table of marks of $He.2$ and the fusion map into it from $He$ was added
+\contrib{by Liam Naughton}.\cr
+NEW&Sz(8)&:&The table of marks of $Sz(8).3$ and the fusion map into it from $Sz(8)$ was added
+\contrib{by Liam Naughton}.\cr
+NEW&^2F_{4}(2)'&:&The table of marks of $^2F_{4}(2)$ and the fusion map into it from $^2F_{4}(2)'$ was added
+\contrib{by Liam Naughton}.\cr}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.2.2 (September 2011)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order. The following standard generators were added/corrected.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+***&2.A5&:& generator orders are [ 3, 4 ] not [ 4, 3 ],
+          the compatibility flag is "N" not "Y"
+\contrib{by T Breuer}.\cr
+***&2.A6&:& the product of the generators has order 5 not 10
+\contrib{by T Breuer}.\cr
+***&2.S6&:& generator orders are [ 4, 5 ] not [ 2, 5 ],
+\contrib{by T Breuer}.\cr
+***&L2(8).3&:& generator orders are [ 2, 6 ] not [ 2, 3 ],
+             therefore the compatibility flag is "N" not "Y"
+\contrib{by T Breuer}.\cr
+***&L2(11).2&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(13).2&:& generator orders are [ 2, 14 ] not [ 2, 3 ]
+\contrib{by T Breuer}.\cr
+NEW&3.S7&:& new info record added
+\contrib{by T Breuer}.\cr
+***&L2(25).2_2&:& generator orders are [ 3, 10 ] not [ 4, 12 ],
+                additional conditions are $|cd|=4, |cdd|=4$
+\contrib{by T Breuer}.\cr
+***&L3(4).2_2&:& generator orders are [ 2, 4 ] not [ 2, 5 ],
+               the compatibility flag is "N" not "Y",
+               additional conditions are $|C(f)|=16, |ef|=14$
+\contrib{by T Breuer}.\cr
+***&L3(4).D12&:& generator orders are [ 10, 14 ] not [ 2, 12 ],
+               additional conditions are $|tu|=12, |tuu|=8, |tu^3|=6,
+               |ttu^3|=8, |tutuu|=6, |tutuutu^3|=6$
+\contrib{by T Breuer}.\cr
+***&2^2.L3(4)&:& generator orders are [ 2, 4 ] not [ 2, 10 ],
+              additional conditions are $|EF|=7, |EFF|=5$
+\contrib{by T Breuer}.\cr
+***&L2(37)&:& the product of the generators has order 37 not 31,
+            the compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&U4(2).2&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&2.U4(2).2&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+NEW&Sz(8):3&:& new info record added
+\contrib{by T Breuer}.\cr
+NEW&L2(32).5&:& new info record added
+\contrib{by T Breuer}.\cr
+***&L2(41)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(43)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(47)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(49)&:& the product of the generators has order 25 not 47
+\contrib{by T Breuer}.\cr
+***&L2(53)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(59)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(61)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+NEW&U3(5).3&:& had been commented out, note that |C(f)|=36 not 24
+\contrib{by T Breuer}.\cr
+***&U3(5).S3&:& generator orders are [ 20, 3 ] not [ 3, 12 ],
+              additional conditions are $|gh|=6, |ghh|=8, |ggh|=24, |g^3h|=10,
+              |hhghgg|=20$
+\contrib{by T Breuer}.\cr}
+
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bigbreak
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Release of TomLib~1.2.3 (October 2013)}
+
+\bigbreak
+
+Changes are assigned to the simple group involved,
+and shown in alphabetical order. The following standard generators were added/corrected.
+
+\medbreak
+
+\halign{\hfil{\bf #}&\quad$#$\hfil&\quad#\hfil$\;\>$&
+ \vtop{\parindent0pt\hsize=38em\strut#\strut}\cr
+***&L2(67)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(71)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&S9&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(73)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(79)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(64)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(81)&:& the product of the generators has order 41 not 10
+\contrib{by T Breuer}.\cr
+***&L2(83)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(89)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L3(5)&:& generator orders are [ 3, 5 ] not [ 5, 3 ]
+\contrib{by T Breuer}.\cr
+***&L2(97)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(101)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(103)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&J2.2&:& generator orders are [ 2, 5 ] not [ 7, 5 ]
+\contrib{by T Breuer}.\cr
+***&L2(107)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(109)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&L2(113)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+***&S4(4)&:& the second generator has centralizer of order 25 not 15
+\contrib{by T Breuer}.\cr
+NEW&U4(3).2^2_133&:& had been commented out
+\contrib{by T Breuer}.\cr
+***&G2(3).2&:& generator orders are [ 2, 13 ] not [ 7, 13 ]
+\contrib{by T Breuer}.\cr
+***&L4(3)&:& generator orders are [ 2, 13 ] not [ 2, 4 ]
+           the compatibility flag is "N" not "Y"
+\contrib{by T Breuer}.\cr
+NEW&2F4(2)&:& New info record added
+\contrib{by T Breuer}.\cr
+***&Sz(32)&:& the element $(ab)^3(bab)^2bbabb$ has order 41 not 25
+\contrib{by T Breuer}.\cr
+NEW&HS.2&:& new info record added
+\contrib{by T Breuer}.\cr
+***&J3&:& the element ababb has order 9 not 19
+\contrib{by T Breuer}.\cr
+NEW&O8+(2)&:& had been commented out
+\contrib{by T Breuer}.\cr
+NEW&S12&:& new info record added
+\contrib{by T Breuer}.\cr
+***&M24&:& the last condition is $|(ab)^3(ba)^2bbabb|=4$ not $|(ab)^3(bab)^2bbabb|=4$
+\contrib{by T Breuer}.\cr
+****&G2(4)&:& compatibility flag is "Y" not "N"
+\contrib{by T Breuer}.\cr
+NEW&A13&:& new info record added
+\contrib{by T Breuer}.\cr
+NEW&S13&:& new info record added
+\contrib{by T Breuer}.\cr
+NEW&He.2&:& new info record added
+\contrib{by T Breuer}.\cr}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bigbreak
+Last update October 10th, 2013.
+
+\bye
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%E
+
