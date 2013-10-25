@@ -75,16 +75,16 @@
   
   The Sporadic Groups
   
-  --    HS, McL, He, J_1, J_2, J_3, M_11, M_12, M_22, M_23, M_24
+  --    Co_3, HS, McL, He, J_1, J_2, J_3, M_11, M_12, M_22, M_23, M_24
   
   The  names  given  to each subgroup are consistent with those used in Robert
-  Wilon's  atlas  [ATLAS] For example if you wish to access the table of marks
+  Wilson's  atlas [ATLAS] For example if you wish to access the table of marks
   of  the  maximal  subgroup  "5:4  x  A5"  of  the  Higman-Sims  group do the
   following:
   
   [4X---------------------------  Example  ----------------------------[0X
-    [4Xgap> TableOfMarks("5:4 x A5");[0X
-    [4XTableOfMarks( "5:4 x A5" )[0X
+    [4Xgap> TableOfMarks("5:4xA5");[0X
+    [4XTableOfMarks( "5:4xA5" )[0X
   [4X------------------------------------------------------------------[0X
   
   

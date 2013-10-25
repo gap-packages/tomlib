@@ -232,11 +232,14 @@ InstallGlobalFunction( SetActualLibFileName, function( file )
     LIBTOMKNOWN.LOADSTATUS.(file):= [ "userloaded", 0 ];
 end );
 
-
 #############################################################################
 ##
 #F  LIBTOM( <arg> )
 ##
+MakeReadWriteGlobal( "LIBTOM" );
+UnbindGlobal( "LIBTOM" );
+DeclareGlobalFunction( "LIBTOM" );
+
 InstallGlobalFunction( LIBTOM, function( arg )
     local record, entry, nrgens, i, name;
 
@@ -267,7 +270,17 @@ InstallGlobalFunction( LIBTOM, function( arg )
               generators  := entry[3],
               description := entry[4],
               script      := ScriptFromString( entry[4] ),
-              ATLAS       := ( entry[2] = "Y" ) ) ];
+              ATLAS       := ( entry[2] <> "N" ) ) ];
+          if IsInt( entry[2] ) then
+            record.StandardGeneratorsInfo[1].standardization:= entry[2];
+          fi;
+          if 4 < Length( entry ) then
+            # Store two straight line programs for standardizing.
+            record.StandardGeneratorsInfo[1].ATLASFromTom:= CallFuncList(
+                StraightLineProgram, entry[5] );
+            record.StandardGeneratorsInfo[1].TomFromATLAS:= CallFuncList(
+                StraightLineProgram, entry[6] );
+          fi;
           break;
         fi;
       od;

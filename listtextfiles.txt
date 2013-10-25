@@ -96,6 +96,7 @@ tomlib/doc/chapInd.html
 tomlib/doc/chap0.txt
 tomlib/doc/chap1.txt
 tomlib/doc/manual.css
+tomlib/doc/tomdiff.tex
 tomlib/doc/chapInd.txt
 tomlib/doc/bib.xml
 tomlib/doc/chap1.html

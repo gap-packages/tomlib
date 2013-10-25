@@ -3,16 +3,16 @@
   [1XReferences[0X
   
   [[20XBur55[15X]   [16XBurnside,   W.[15X,  [17XTheory  of  groups  of  finite  order[15X,  Dover
-  Publications   Inc.,  New  York  (1955),  xxiv+512  pages,  ((Unabridged
-  republication of the second edition, published in 1911)).
+  Publications  Inc., New York (1955), xxiv+512, (Unabridged republication
+  of the second edition, published in 1911)
   
   [[20XWil96[15X]  [16XWilson,  R. A.[15X, [17XStandard generators for sporadic simple groups[15X,
-  [18XJ. Algebra[15X, [19X184[15X, 2 (1996), 505–515.
+  [18XJ. Algebra[15X, [19X184[15X, 2 (1996), 505–515
   
   [[20XATLAS[15X]  [16XWilson,  R.  A., Walsh, P., Tripp, J., Suleiman, I., Parker, R.
   A.,  Norton,  S. P., Nickerson, S., Linton, S., Bray, J. and Abbott, R.[15X,
   [17XATLAS          of          Finite         Group         Representations[15X,
-  http://brauer.maths.qmul.ac.uk/Atlas/.
+  http://brauer.maths.qmul.ac.uk/Atlas/
   
   
   
