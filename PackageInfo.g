@@ -6,7 +6,7 @@ SetPackageInfo( rec(
 PackageName :=
   "TomLib",
 MyVersion :=
-  "1r2p3",
+  "1r2p4",
 MyWWWHome :=
   "http://schmidt.nuigalway.ie",
 Subtitle :=
@@ -22,7 +22,8 @@ Date :=
   # "06/08/2009" // Version 1.1.5
   # "06/04/2011" // Version 1.2.1
   # "30/09/2011" // Version 1.2.2
-"10/10/2013",
+  # "10/10/2013" // Version 1.2.3
+"10/11/2013",
 PackageWWWHome :=
   Concatenation( ~.MyWWWHome, "/", LowercaseString( ~.PackageName ) ),
 ArchiveURL :=
@@ -94,7 +95,7 @@ Dependencies := rec(
   GAP :=
     ">= 4.4",
   NeededOtherPackages :=
-    [],
+    [ ["atlasrep", ">= 1.5"] ],
   SuggestedOtherPackages :=
     [ ["ctbllib", ">= 1.1"] ], # [["gpisotyp", ">= 1.0"]],
   ExternalConditions :=

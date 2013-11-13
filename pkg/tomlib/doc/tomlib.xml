@@ -19,7 +19,7 @@
 			&nbsp;
 		</Subtitle>
 		
-		<Version>Version 1.2.3</Version> 
+		<Version>Version 1.2.4</Version> 
 		<!-- OPTIONAL -->
 		<Author> 
 			Liam Naughton<Br/>                <!-- REQUIRED -->
@@ -35,7 +35,7 @@
 			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
 		</Author> 
 		
-		<Date>October 2013</Date> 
+		<Date>November 2013</Date> 
 		<!-- OPTIONAL -->
 		
 		<Copyright> 
