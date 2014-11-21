@@ -6,7 +6,7 @@ SetPackageInfo( rec(
 PackageName :=
   "TomLib",
 MyVersion :=
-  "1r2p4",
+  "1r2p5",
 MyWWWHome :=
   "http://schmidt.nuigalway.ie",
 Subtitle :=
@@ -23,7 +23,8 @@ Date :=
   # "06/04/2011" // Version 1.2.1
   # "30/09/2011" // Version 1.2.2
   # "10/10/2013" // Version 1.2.3
-"10/11/2013",
+  # "10/11/2013" // Version 1.2.4
+"21/11/2014",
 PackageWWWHome :=
   Concatenation( ~.MyWWWHome, "/", LowercaseString( ~.PackageName ) ),
 ArchiveURL :=

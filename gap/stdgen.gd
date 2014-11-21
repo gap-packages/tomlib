@@ -119,6 +119,11 @@ Revision.stdgen_gd :=
 ##      (see&nbsp;<Cite Key="AGR"/>), and <K>false</K> means that this
 ##      property is not guaranteed.
 ##  </Item>
+##  <Mark><C>standardization</C></Mark>
+##  <Item>
+##	a positive integer <M>i</M>; Whenever <C>ATLAS</C> returns <K>true</K> the value of <M>i</M> means that the generators 
+##	stored in the group are standard generators w.r.t. standardization <M>i</M>, in the sense of Rob Wilson's &ATLAS; of Group Representations.
+##  </Item>
 ##  </List>
 ##  <P/>
 ##  There is no default method for an arbitrary isomorphism type,
@@ -132,11 +137,12 @@ Revision.stdgen_gd :=
 ##  can be computed by <Ref Func="HumanReadableDefinition"/>.
 ##  <Example><![CDATA[
 ##  gap> StandardGeneratorsInfo( TableOfMarks( "L3(3)" ) );
-##  [ rec( ATLAS := true, 
-##        description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", 
-##        generators := "a, b", 
-##        script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], 
-##            [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] ) ]
+##[ rec( ATLAS := true, 
+##      description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", 
+##      generators := "a, b", 
+##      script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], 
+##          [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ], 
+##      standardization := 1 ) ]
 ##  ]]></Example>
 ##  </Description>
 ##  </ManSection>
@@ -310,8 +316,9 @@ DeclareGlobalFunction( "IsStandardGeneratorsOfGroup" );
 ##  gap> a5:= AlternatingGroup( 5 );
 ##  Alt( [ 1 .. 5 ] )
 ##  gap> info:= StandardGeneratorsInfo( TableOfMarks( "A5" ) )[1];
-##  rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", 
-##    generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ] )
+## rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", 
+##  generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ], 
+##  standardization := 1 )
 ##  gap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (3,4,5) ] );
 ##  true
 ##  gap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (1,2,3) ] );
@@ -356,10 +363,11 @@ DeclareGlobalFunction( "StandardGeneratorsOfGroup" );
 ##  of a table of marks if it is not yet stored.
 ##  <P/>
 ##  <Example><![CDATA[
+##  gap> a5:=TableOfMarks("A5");
 ##  gap> std:= StandardGeneratorsInfo( a5 );
-##  [ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5",
-##        generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ]
-##           ] ) ]
+##  [ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", 
+##      generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] 
+##         ], standardization := 1 ) ]
 ##  gap> # Now find standard generators of an isomorphic group.
 ##  gap> g:= SL(2,4);;
 ##  gap> repeat

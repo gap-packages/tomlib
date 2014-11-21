@@ -19,7 +19,7 @@
 			&nbsp;
 		</Subtitle>
 		
-		<Version>Version 1.2.4</Version> 
+		<Version>Version 1.2.5</Version> 
 		<!-- OPTIONAL -->
 		<Author> 
 			Liam Naughton<Br/>                <!-- REQUIRED -->
@@ -35,12 +35,12 @@
 			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
 		</Author> 
 		
-		<Date>November 2013</Date> 
+		<Date>November 2014</Date> 
 		<!-- OPTIONAL -->
 		
 		<Copyright> 
 			<!-- OPTIONAL -->
-			&copyright; 2013 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
+			&copyright; 2014 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
 		</Copyright> 
 		
 		<Acknowledgements> 
