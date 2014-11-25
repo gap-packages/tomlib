@@ -6,10 +6,10 @@
                                       [1X    [0m
   
   
-                                 Version 1.2.4
+                                 Version 1.2.5
   
   
-                                 November 2013
+                                 November 2014
   
   
                          Liam Naughton Goetz Pfeiffer  
@@ -28,7 +28,7 @@
   
   -------------------------------------------------------
   [1XCopyright[0m
-  ©  2013  We  adopt  the  copyright  regulations  of  GAP  as detailed in the
+  ©  2014  We  adopt  the  copyright  regulations  of  GAP  as detailed in the
   copyright notice in the GAP manual.
   
   

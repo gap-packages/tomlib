@@ -283,6 +283,12 @@
         defined  in Rob Wilson's [5XAtlas[0m of Group Representations (see [ATLAS]),
         and [9Xfalse[0m means that this property is not guaranteed.
   
+  [8X[10Xstandardization[0m[8X[0m
+        a positive integer i; Whenever [10XATLAS[0m returns [9Xtrue[0m the value of i means
+        that the generators stored in the group are standard generators w.r.t.
+        standardization  i,  in  the  sense  of  Rob  Wilson's  [5XAtlas[0m of Group
+        Representations.
+  
   There  is  no  default  method  for  an arbitrary isomorphism type, since in
   general the definition of standard generators is not obvious.
   
@@ -296,10 +302,11 @@
   [4X---------------------------  Example  ----------------------------[0X
     [4Xgap> StandardGeneratorsInfo( TableOfMarks( "L3(3)" ) );[0X
     [4X[ rec( ATLAS := true, [0X
-    [4X      description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [0X
-    [4X      generators := "a, b", [0X
-    [4X      script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [0X
-    [4X          [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] ) ][0X
+    [4X    description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [0X
+    [4X    generators := "a, b", [0X
+    [4X    script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [0X
+    [4X        [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ], [0X
+    [4X    standardization := 1 ) ][0X
   [4X------------------------------------------------------------------[0X
   
   [1X1.5-2 HumanReadableDefinition[0m
@@ -404,7 +411,8 @@
     [4XAlt( [ 1 .. 5 ] )[0X
     [4Xgap> info:= StandardGeneratorsInfo( TableOfMarks( "A5" ) )[1];[0X
     [4Xrec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", [0X
-    [4X  generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ] )[0X
+    [4Xgenerators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ], [0X
+    [4Xstandardization := 1 )[0X
     [4Xgap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (3,4,5) ] );[0X
     [4Xtrue[0X
     [4Xgap> IsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (1,2,3) ] );[0X
@@ -434,10 +442,11 @@
   table of marks if it is not yet stored.
   
   [4X---------------------------  Example  ----------------------------[0X
+    [4Xgap> a5:=TableOfMarks("A5");[0X
     [4Xgap> std:= StandardGeneratorsInfo( a5 );[0X
-    [4X[ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5",[0X
-    [4X      generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ][0X
-    [4X         ] ) ][0X
+    [4X[ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", [0X
+    [4X    generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] [0X
+    [4X       ], standardization := 1 ) ][0X
     [4Xgap> # Now find standard generators of an isomorphic group.[0X
     [4Xgap> g:= SL(2,4);;[0X
     [4Xgap> repeat[0X
