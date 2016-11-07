@@ -6,7 +6,7 @@ SetPackageInfo( rec(
 PackageName :=
   "TomLib",
 MyVersion :=
-  "1r2p5",
+  "1r2p6",
 MyWWWHome :=
   "http://schmidt.nuigalway.ie",
 Subtitle :=
@@ -24,7 +24,8 @@ Date :=
   # "30/09/2011" // Version 1.2.2
   # "10/10/2013" // Version 1.2.3
   # "10/11/2013" // Version 1.2.4
-"21/11/2014",
+  # "21/11/2014" // Version 1.2.5
+"07/11/2016",
 PackageWWWHome :=
   Concatenation( ~.MyWWWHome, "/", LowercaseString( ~.PackageName ) ),
 ArchiveURL :=
@@ -38,17 +39,18 @@ rec(
     FirstNames := "Liam",
     IsAuthor := false,
     IsMaintainer := true,
-    Email := "liam.naughton@nuigalway.ie",
+    Email := "l.naughton@wlv.ac.uk",
     WWWHome := ~.MyWWWHome,
-    Place := "Galway",
-    Institution := "School of Mathematics, Statistics and Applied Mathematics, NUI Galway",
+    Place := "Wolverhampton",
+    Institution := "School of Mathematics & Computer Science, University of Wolverhampton",
     PostalAddress := Concatenation( [
       "Liam Naughton\n",
-      "School of Mathematics, Statistics and Applied Mathematics\n",
-      "NUI Galway\n",
-      "University Road\n",
-      "Galway\n",
-      "Ireland"
+      "School of Mathematics & Computer Science\n",
+      "University of Wolverhampton\n",
+      "Wulfruna Street\n",
+      "Wolverhampton\n",
+      "United Kingdom\n",
+      "WV1 1LY"
       ] )
   ),
 rec(

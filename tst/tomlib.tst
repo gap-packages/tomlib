@@ -8,7 +8,6 @@
 ##
 
 gap> START_TEST("$Id: tomlib.tst,v 1.3 2003/10/30 08:00:31 gap Exp $");
-
 gap> LoadPackage( "tomlib" );
 true
 
@@ -20,7 +19,6 @@ gap> for name in AllLibTomNames() do
 >        Print( "#E  problem loading t.o.m. of `", name, "'\n" );
 >      fi;
 > od;
-
 gap> STOP_TEST( "tomlib.tst", 200000000000 );
 
 

@@ -19,7 +19,7 @@
 			&nbsp;
 		</Subtitle>
 		
-		<Version>Version 1.2.5</Version> 
+		<Version>Version 1.2.6</Version> 
 		<!-- OPTIONAL -->
 		<Author> 
 			Liam Naughton<Br/>                <!-- REQUIRED -->
@@ -31,16 +31,16 @@
 				Galway,<Br/>
 				Ireland.
 			</Address>
-			<Email> liam.naughton@nuigalway.ie, goetz.pfeiffer@nuigalway.ie</Email>
+			<Email> l.naughton@wlv.ac.uk, goetz.pfeiffer@nuigalway.ie</Email>
 			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
 		</Author> 
 		
-		<Date>November 2014</Date> 
+		<Date>November 2016</Date> 
 		<!-- OPTIONAL -->
 		
 		<Copyright> 
 			<!-- OPTIONAL -->
-			&copyright; 2014 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
+			&copyright; 2016 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
 		</Copyright> 
 		
 		<Acknowledgements> 

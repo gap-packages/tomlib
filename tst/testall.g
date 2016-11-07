@@ -8,8 +8,8 @@
 ##
 
 LoadPackage( "tomlib" );
-
-ReadTest( "tomlib.tst" );
+pkgdir := DirectoriesPackageLibrary( "tomlib", "tst" );
+Test( Filename( pkgdir, "tomlib.tst" ) );
 
 
 #############################################################################
