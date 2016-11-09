@@ -6,10 +6,10 @@
                                       [1X    [0m
   
   
-                                 Version 1.2.5
+                                 Version 1.2.6
   
   
-                                 November 2014
+                                 November 2016
   
   
                          Liam Naughton Goetz Pfeiffer  
@@ -17,7 +17,7 @@
   
   
   Liam Naughton Goetz Pfeiffer  
-      Email:    [7Xmailto:liam.naughton@nuigalway.ie, goetz.pfeiffer@nuigalway.ie[0m
+      Email:    [7Xmailto:l.naughton@wlv.ac.uk, goetz.pfeiffer@nuigalway.ie[0m
       Homepage: [7Xhttp://schmidt.nuigalway.ie/tomlib[0m
       Address:  School of Mathematics, Statistics and Applied Mathematics
                 National University of Ireland Galway,
@@ -28,7 +28,7 @@
   
   -------------------------------------------------------
   [1XCopyright[0m
-  ©  2014  We  adopt  the  copyright  regulations  of  GAP  as detailed in the
+  ©  2016  We  adopt  the  copyright  regulations  of  GAP  as detailed in the
   copyright notice in the GAP manual.
   
   

@@ -4,7 +4,7 @@ The GAP Library of Tables of Marks
 Description
 -----------
 
-This is Version 1.2.5 of the GAP Library of Tables of Marks,
+This is Version 1.2.6 of the GAP Library of Tables of Marks,
 which is an add-on package for GAP 4.
 
 If you have found important features missing or if there is a bug,
@@ -12,7 +12,7 @@ let us know and we will try to address it in the next version of the
 GAP Library of Tables of Marks.
 Please send a short email to
 
-          Liam Naughton    <liam.naughton@nuigalway.ie>
+          Liam Naughton    <l.naughton@wlv.ac.uke>
 
 This holds in particular if you have used the GAP Library of Tables of Marks
 to solve a problem.
@@ -55,19 +55,19 @@ the archive.
 
 On UNIX systems the zoo archive may be unpacked by
 
-    zoo x tomlib1r2p5.zoo
+    zoo x tomlib1r2p6.zoo
 
 which will unpack the archive into a directory `tomlib' in the
 current directory. 
 
 On UNIX systems the compressed tar archive may be unpacked by
 
-    tar xzf tomlib1r2p5.tar.gz
+    tar xzf tomlib1r2p6.tar.gz
 
 or, if tar on your system does not understand the option z, by
 
-    gunzip tomlib1r2p5.tar.gz
-    tar xf tomlib1r2p5.tar
+    gunzip tomlib1r2p6.tar.gz
+    tar xf tomlib1r2p6.tar
 
 which will in each case unpack the code into a directory `tomlib'
 in the current directory.
@@ -77,7 +77,7 @@ C-code for unzoo from the GAP web page and compile it on your system.
 For this your system needs to have a C-compiler.
 unzoo can be used to unpack the zoo archive, as follows:
 
-    unzoo -x tomlib1r2p5.zoo
+    unzoo -x tomlib1r2p6.zoo
 
 unpacks the archive into a directory `tomlib' in the current directory.
 
