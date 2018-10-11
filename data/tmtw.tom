@@ -2,8 +2,6 @@
 ##
 #W  tmtw.tom             GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmtw.tom,v 4.3 2001/07/05 07:20:17 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of simple twisted groups.
@@ -57,8 +55,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmtw_tom :=
-    "@(#)$Id: tmtw.tom,v 4.3 2001/07/05 07:20:17 gap Exp $";
 
 SetActualLibFileName("tmtw");
 LIBTOM( "Sz(8)",

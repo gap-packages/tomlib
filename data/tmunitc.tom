@@ -2,8 +2,6 @@
 ##
 #W  tmunitc.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmunitc.tom,v 4.2 2001/07/05 07:21:16 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of covers of unitary groups.
@@ -48,8 +46,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunitc_tom :=
-    "@(#)$Id: tmunitc.tom,v 4.2 2001/07/05 07:21:16 gap Exp $";
 
 SetActualLibFileName("tmunitc");
 LIBTOM( "2.U4(2).2",

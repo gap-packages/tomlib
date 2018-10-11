@@ -2,8 +2,6 @@
 ##
 #W  tms10m2.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tms10m2.tom,v 4.2 2001/07/05 07:17:07 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of maximal subgroups of $S10$.
@@ -48,8 +46,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tms10m2_tom :=
-    "@(#)$Id: tms10m2.tom,v 4.2 2001/07/05 07:17:07 gap Exp $";
 
 SetActualLibFileName("tms10m2");
 LIBTOM( "S6xS4",

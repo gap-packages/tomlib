@@ -2,8 +2,6 @@
 ##
 #W  tmm24m7.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmm24m7.tom,v 4.2 2001/07/05 07:05:31 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the seventh maximal subgroup of
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmm24m7_tom :=
-    "@(#)$Id: tmm24m7.tom,v 4.2 2001/07/05 07:05:31 gap Exp $";
 
 SetActualLibFileName("tmm24m7");
 LIBTOM( "2^6:(L3(2)xS3)",

@@ -2,15 +2,11 @@
 ##
 #W  stdgen.gd                GAP library                        Thomas Breuer
 ##
-#H  @(#)$Id: stdgen.gd,v 1.6 2010/09/28 16:47:46 alexk Exp $
-##
 #Y  (C) 1999 School Math and Comp. Sci., University of St.  Andrews, Scotland
 ##
 ##  This file contains the declarations needed for dealing with standard
 ##  generators of finite groups.
 ##
-Revision.stdgen_gd :=
-    "@(#)$Id: stdgen.gd,v 1.6 2010/09/28 16:47:46 alexk Exp $";
 
 
 #T TO DO:

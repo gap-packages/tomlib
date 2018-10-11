@@ -2,8 +2,6 @@
 ##
 #W  tmx3l34.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmx3l34.tom,v 4.4 2003/12/15 09:52:17 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the groups $3.L3(4)$ and
@@ -58,8 +56,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmx3l34_tom :=
-    "@(#)$Id: tmx3l34.tom,v 4.4 2003/12/15 09:52:17 gap Exp $";
 
 SetActualLibFileName("tmx3l34");
 LIBTOM( "3.L3(4)",

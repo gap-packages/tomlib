@@ -2,8 +2,6 @@
 ##
 #W  tmco3.tom            GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmco3.tom,v 4.4 2003/12/16 17:29:42 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 #Y  (C) 1998 School Math and Comp. Sci., University of St.  Andrews, Scotland
 ##
@@ -62,8 +60,6 @@
 #H  T.Merkwitz
 #H  ==========================================================================
 #H
-Revision.tmco3_tom :=
-    "@(#)$Id: tmco3.tom,v 4.4 2003/12/16 17:29:42 gap Exp $";
 
 SetActualLibFileName("tmco3");
 

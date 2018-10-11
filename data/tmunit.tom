@@ -2,8 +2,6 @@
 ##
 #W  tmunit.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmunit.tom,v 4.2 2001/07/05 07:20:54 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks unitary groups.
@@ -48,8 +46,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunit_tom :=
-    "@(#)$Id: tmunit.tom,v 4.2 2001/07/05 07:20:54 gap Exp $";
 
 SetActualLibFileName("tmunit");
 LIBTOM( "U3(3)",

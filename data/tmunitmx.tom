@@ -2,8 +2,6 @@
 ##
 #W  tmunitmx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmunitmx.tom,v 4.2 2001/07/05 07:21:29 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of unitary
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunitmx_tom :=
-    "@(#)$Id: tmunitmx.tom,v 4.2 2001/07/05 07:21:29 gap Exp $";
 
 SetActualLibFileName("tmunitmx");
 LIBTOM( "2^(2+4):15",

@@ -2,8 +2,6 @@
 ##
 #W  tmunita.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmunita.tom,v 4.8 2003/12/15 09:45:31 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 #Y  (C) 1998 School Math and Comp. Sci., University of St.  Andrews, Scotland
 ##
@@ -83,8 +81,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunita_tom :=
-    "@(#)$Id: tmunita.tom,v 4.8 2003/12/15 09:45:31 gap Exp $";
 
 SetActualLibFileName("tmunita");
 

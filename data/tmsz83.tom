@@ -7,8 +7,6 @@
 ##  This file contains the table of marks of the ATLAS group $Sz(8).3$.
 ##
 
-Revision.tmsz83_tom :=
-    "2011-03-15 14:09:12";
 SetActualLibFileName("tmsz83");
 LIBTOM("Sz(8).3",[ [ 1 ], [ 1, 2 ], [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 5 ], [ 1, 6 ], 
   [ 1, 2, 4, 7 ], [ 1, 2, 3, 4, 8 ], [ 1, 2, 5, 9 ], [ 1, 10 ], 

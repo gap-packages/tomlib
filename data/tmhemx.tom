@@ -2,8 +2,6 @@
 ##
 #W  tmhemx.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmhemx.tom,v 4.3 2001/07/05 07:00:21 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of $He$.
@@ -57,8 +55,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmhemx_tom :=
-    "@(#)$Id: tmhemx.tom,v 4.3 2001/07/05 07:00:21 gap Exp $";
 
 SetActualLibFileName("tmhemx");
 LIBTOM( "2^(1+6)+.L3(2)",
