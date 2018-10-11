@@ -32,7 +32,7 @@ ArchiveURL :=
   Concatenation( ~.PackageWWWHome, "/", LowercaseString( ~.PackageName ),
                  ~.MyVersion ),
 ArchiveFormats :=
-  ".tar.gz,.zoo",
+  ".tar.gz",
 Persons := [
 rec(
     LastName := "Naughton",

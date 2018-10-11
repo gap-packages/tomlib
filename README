@@ -47,18 +47,9 @@ in the following files and directories:
 Unpacking
 ---------
 
-You may have got the GAP Library of Tables of Marks as
-a zoo archive (filename ends with .zoo)
-or a compressed tar archive (filename ends with .tar.gz).
-In each case, use the appropriate command on your system to unpack
-the archive.
-
-On UNIX systems the zoo archive may be unpacked by
-
-    zoo x tomlib1r2p6.zoo
-
-which will unpack the archive into a directory `tomlib' in the
-current directory. 
+You may have got the GAP Library of Tables of Marks as or a compressed tar
+archive (filename ends with .tar.gz). Use the appropriate command on your
+system to unpack the archive.
 
 On UNIX systems the compressed tar archive may be unpacked by
 
@@ -68,18 +59,6 @@ or, if tar on your system does not understand the option z, by
 
     gunzip tomlib1r2p6.tar.gz
     tar xf tomlib1r2p6.tar
-
-which will in each case unpack the code into a directory `tomlib'
-in the current directory.
-
-If your system does not have a zoo programme, you can pick up the
-C-code for unzoo from the GAP web page and compile it on your system.
-For this your system needs to have a C-compiler.
-unzoo can be used to unpack the zoo archive, as follows:
-
-    unzoo -x tomlib1r2p6.zoo
-
-unpacks the archive into a directory `tomlib' in the current directory.
 
 
 Installation
