@@ -9,11 +9,5 @@
 
 LoadPackage( "tomlib" );
 pkgdir := DirectoriesPackageLibrary( "tomlib", "tst" );
-Test( Filename( pkgdir, "tomlib.tst" ) );
-
-
-#############################################################################
-##
-#E
-
-
+TestDirectory( pkgdir, rec(exitGAP := true ) );
+FORCE_QUIT_GAP(1);
