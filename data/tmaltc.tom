@@ -2,8 +2,6 @@
 ##
 #W  tmaltc.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmaltc.tom,v 4.3 2001/07/05 06:56:57 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of the automorphism groups of 

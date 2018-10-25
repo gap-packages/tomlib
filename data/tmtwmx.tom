@@ -2,8 +2,6 @@
 ##
 #W  tmtwmx.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmtwmx.tom,v 4.5 2003/12/15 09:59:52 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of simple 

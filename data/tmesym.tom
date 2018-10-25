@@ -2,8 +2,6 @@
 ##
 #W  tmesym.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmesym.tom,v 4.2 2001/07/05 06:59:03 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of the groups $2^4:Sx$.

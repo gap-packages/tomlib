@@ -2,8 +2,6 @@
 ##
 #W  tmlin2mx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmlin2mx.tom,v 4.2 2001/07/05 07:01:59 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of $L2(??)$.

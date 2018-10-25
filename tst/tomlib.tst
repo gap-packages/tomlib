@@ -2,12 +2,10 @@
 ##
 #W  tomlib.tst              GAP 4 package `tomlib'              Thomas Breuer
 ##
-#H  @(#)$Id: tomlib.tst,v 1.3 2003/10/30 08:00:31 gap Exp $
-##
 #Y  Copyright (C)  2003,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 
-gap> START_TEST("$Id: tomlib.tst,v 1.3 2003/10/30 08:00:31 gap Exp $");
+gap> START_TEST("tomlib.tst");
 gap> LoadPackage( "tomlib" );
 true
 

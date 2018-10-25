@@ -2,8 +2,6 @@
 ##
 #W  tmunitam.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmunitam.tom,v 4.3 2003/12/16 17:29:45 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of the groups

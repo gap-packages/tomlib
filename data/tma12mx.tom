@@ -2,8 +2,6 @@
 ##
 #W  tma12mx.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tma12mx.tom,v 4.3 2001/07/05 06:56:31 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains tables of marks of maximal subgroups of $A12$

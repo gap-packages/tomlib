@@ -2,8 +2,6 @@
 ##
 #W  tmhsmclm.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmhsmclm.tom,v 4.2 2001/07/05 07:01:06 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of maximal subgroups of $McL$ and

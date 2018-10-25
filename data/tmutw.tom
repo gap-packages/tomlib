@@ -2,8 +2,6 @@
 ##
 #W  tmutw.tom            GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmutw.tom,v 4.2 2001/07/05 07:21:34 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of simple untwisted groups.

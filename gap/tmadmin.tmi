@@ -2,8 +2,6 @@
 ##
 #W  tmadmin.tmi         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmadmin.tmi,v 1.10 2008/01/08 10:48:38 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the implementation part of all functions to

@@ -2,8 +2,6 @@
 ##
 #W  tmlin2.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmlin2.tom,v 4.5 2001/07/05 07:01:36 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of linear groups $L2(??)$.

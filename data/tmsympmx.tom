@@ -2,8 +2,6 @@
 ##
 #W  tmsympmx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmsympmx.tom,v 4.2 2001/07/05 07:20:11 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of maximal subgroups of symplectic
