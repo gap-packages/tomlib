@@ -2,8 +2,6 @@
 ##
 #W  tmealt.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmealt.tom,v 4.2 2001/07/05 06:58:54 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of the groups $2^4:Ax$.
@@ -48,8 +46,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmealt_tom :=
-    "@(#)$Id: tmealt.tom,v 4.2 2001/07/05 06:58:54 gap Exp $";
 
 SetActualLibFileName("tmealt");
 LIBTOM( "2^4:A6",

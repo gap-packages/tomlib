@@ -2,8 +2,6 @@
 ##
 #W  tms62mx6.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tms62mx6.tom,v 4.2 2001/07/05 07:19:15 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the sixth maximal subgroup of
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tms62mx6_tom :=
-    "@(#)$Id: tms62mx6.tom,v 4.2 2001/07/05 07:19:15 gap Exp $";
 
 SetActualLibFileName("tms62mx6");
 LIBTOM( "2.[2^6]:(S3xS3)",

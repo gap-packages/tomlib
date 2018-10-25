@@ -2,8 +2,6 @@
 ##
 #W  tmlinomx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmlinomx.tom,v 4.2 2001/07/05 07:02:26 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of $Lp(q)$
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmlinomx_tom :=
-    "@(#)$Id: tmlinomx.tom,v 4.2 2001/07/05 07:02:26 gap Exp $";
 
 SetActualLibFileName("tmlinomx");
 LIBTOM( "5^2:GL2(5)",

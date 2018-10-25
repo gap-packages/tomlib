@@ -2,8 +2,6 @@
 ##
 #W  tms11m3.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tms11m3.tom,v 4.2 2001/07/05 07:17:45 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the third maximal subgroup of
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tms11m3_tom :=
-    "@(#)$Id: tms11m3.tom,v 4.2 2001/07/05 07:17:45 gap Exp $";
 
 SetActualLibFileName("tms11m3");
 LIBTOM( "S9x2",

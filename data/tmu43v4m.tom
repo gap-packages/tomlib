@@ -2,8 +2,6 @@
 ##
 #W  tmu43v4m.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmu43v4m.tom,v 4.3 2001/07/05 07:20:45 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of 
@@ -56,8 +54,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmu43v4m_tom :=
-    "@(#)$Id: tmu43v4m.tom,v 4.3 2001/07/05 07:20:45 gap Exp $";
 
 SetActualLibFileName("tmu43v4m");
 LIBTOM( "3^(1+4)+.2^(1+4)-.S3",

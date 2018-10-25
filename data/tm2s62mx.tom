@@ -2,8 +2,6 @@
 ##
 #W  tm2s62mx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tm2s62mx.tom,v 4.2 2001/07/05 06:51:49 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains table of marks of maximal subgroups of the ATLAS group
@@ -49,8 +47,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tm2s62mx_tom :=
-    "@(#)$Id: tm2s62mx.tom,v 4.2 2001/07/05 06:51:49 gap Exp $";
 
 SetActualLibFileName("tm2s62mx");
 LIBTOM( "2.2^6.L3(2)",

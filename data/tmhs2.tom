@@ -6,8 +6,6 @@
 ##
 ##  This file contains the table of marks of the ATLAS group $HS.2$.
 ##
-Revision.tmhs2_tom :=
-    "2011-02-15 08:58:52";
 
 SetActualLibFileName("tmhs2");
 LIBTOM("HS.2",[[1],[1,2],[1,3],[1,4],[1,2,5],[1,2,6],

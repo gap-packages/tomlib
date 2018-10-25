@@ -2,8 +2,6 @@
 ##
 #W  tmalt1.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmalt1.tom,v 4.5 2001/07/05 06:56:41 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of alternating groups.
@@ -70,8 +68,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmalt1_tom :=
-    "@(#)$Id: tmalt1.tom,v 4.5 2001/07/05 06:56:41 gap Exp $";
 
 SetActualLibFileName("tmalt1");
 LIBTOM( "A5",

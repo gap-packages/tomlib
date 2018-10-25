@@ -2,8 +2,6 @@
 ##
 #W  tmjank.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmjank.tom,v 4.4 2001/07/05 07:01:14 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the Janko groups.
@@ -57,8 +55,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmjank_tom :=
-    "@(#)$Id: tmjank.tom,v 4.4 2001/07/05 07:01:14 gap Exp $";
 
 SetActualLibFileName("tmjank");
 LIBTOM( "J1",

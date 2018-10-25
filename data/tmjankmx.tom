@@ -2,8 +2,6 @@
 ##
 #W  tmjankmx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmjankmx.tom,v 4.5 2001/07/05 07:01:20 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of the Janko
@@ -66,8 +64,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmjankmx_tom :=
-    "@(#)$Id: tmjankmx.tom,v 4.5 2001/07/05 07:01:20 gap Exp $";
 
 SetActualLibFileName("tmjankmx");
 LIBTOM( "2^3:7:3",

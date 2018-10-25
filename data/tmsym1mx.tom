@@ -2,8 +2,6 @@
 ##
 #W  tmsym1mx.tom         GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmsym1mx.tom,v 4.2 2001/07/05 07:19:35 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of maximal subgroups of 
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmsym1mx_tom :=
-    "@(#)$Id: tmsym1mx.tom,v 4.2 2001/07/05 07:19:35 gap Exp $";
 
 SetActualLibFileName("tmsym1mx");
 LIBTOM( "S7x2",

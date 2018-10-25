@@ -2,8 +2,6 @@
 ##
 #W  tmutwam.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmutwam.tom,v 4.2 2001/07/05 07:21:43 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of maximal subgroups of groups from
@@ -49,8 +47,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmutwam_tom :=
-    "@(#)$Id: tmutwam.tom,v 4.2 2001/07/05 07:21:43 gap Exp $";
 
 SetActualLibFileName("tmutwam");
 LIBTOM( "3^2.(3x3^(1+2)+):D8",

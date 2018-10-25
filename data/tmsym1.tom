@@ -2,8 +2,6 @@
 ##
 #W  tmsym1.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmsym1.tom,v 4.2 2001/07/05 07:19:27 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of some symmetric groups.
@@ -48,8 +46,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmsym1_tom :=
-    "@(#)$Id: tmsym1.tom,v 4.2 2001/07/05 07:19:27 gap Exp $";
 
 SetActualLibFileName("tmsym1");
 LIBTOM( "S5",

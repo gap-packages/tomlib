@@ -2,8 +2,6 @@
 ##
 #W  tma12m5.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tma12m5.tom,v 4.2 2001/07/05 06:55:43 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the sixth maximal subgroup of
@@ -49,8 +47,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tma12m5_tom :=
-    "@(#)$Id: tma12m5.tom,v 4.2 2001/07/05 06:55:43 gap Exp $";
 
 SetActualLibFileName("tma12m5");
 

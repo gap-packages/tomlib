@@ -2,8 +2,6 @@
 ##
 #W  tm3d42.tom           GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tm3d42.tom,v 4.4 2003/12/16 17:29:39 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the table of marks of the {\ATLAS} group ${}^3D_4(2)$.
@@ -61,8 +59,6 @@
 #H  added new table of marks "3`D4(2)"
 #H  ==========================================================================
 #H
-Revision.tm3d42_tom :=
-    "@(#)$Id: tm3d42.tom,v 4.4 2003/12/16 17:29:39 gap Exp $";
 
 SetActualLibFileName("tm3d42");
 

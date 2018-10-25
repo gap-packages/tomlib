@@ -2,15 +2,11 @@
 ##
 #W  tmadmin.tmd          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmadmin.tmd,v 1.8 2010/05/19 15:56:24 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the declarations of all functions and variables to
 ##  handle the table of marks library.
 ##
-Revision.( "tomlib/gap/tmadmin_tmd" ) :=
-    "@(#)$Id: tmadmin.tmd,v 1.8 2010/05/19 15:56:24 gap Exp $";
 
 
 #############################################################################

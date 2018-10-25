@@ -7,8 +7,6 @@
 ##
 ##  This file contains the table of marks of the ATLAS group $He$
 ##
-Revision.tmhe_tom :=
-    "2011-02-22 12:12:31";
 
 SetActualLibFileName("tmhe");
 LIBTOM( "He",

@@ -2,8 +2,6 @@
 ##
 #W  tmlin2a.tom          GAP table of marks library           Thomas Merkwitz
 ##
-#H  @(#)$Id: tmlin2a.tom,v 4.3 2001/07/05 07:01:55 gap Exp $
-##
 #Y  Copyright (C)  1997,  Lehrstuhl D fuer Mathematik,  RWTH Aachen,  Germany
 ##
 ##  This file contains the tables of marks of some automorphismgroups of
@@ -54,8 +52,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmlin2a_tom :=
-    "@(#)$Id: tmlin2a.tom,v 4.3 2001/07/05 07:01:55 gap Exp $";
 
 SetActualLibFileName("tmlin2a");
 LIBTOM( "L2(7).2",
