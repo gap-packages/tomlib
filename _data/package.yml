@@ -1,75 +1,65 @@
-name: GitHubPagesForGAP
-version: 0.2
-date: 2017-02-04
+name: TomLib
+version: 1.2.6
+date: 2016-11-07
 description: |
-    A GitHub Pages generator for GAP packages
+    The GAP Library of Tables of Marks
 
 authors:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: A. U. Thor
+    - name: Götz Pfeiffer
+      url: mailto:goetz.pfeiffer@nuigalway.ie
 
 maintainers:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: Jan Itor
+    - name: Liam Naughton
+      url: http://schmidt.nuigalway.ie
 
-GAP: ">=4.8.1"
+GAP: ">= 4.4"
 
 needed-pkgs:
-    - name: "GAPDoc"
-      version: ">= 1.2"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
-    - name: "IO"
-      version: ">= 4.1"
-      url: "https://gap-packages.github.io/io"
+    - name: "atlasrep"
+      version: ">= 1.5"
+      url: "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep"
 
 suggested-pkgs:
-    - name: "orb"
-      version: ">= 4.2"
-      url: "https://gap-packages.github.io/orb"
+    - name: "ctbllib"
+      version: ">= 1.1"
+      url: "http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib"
 
-www: https://gap-system.github.io/GitHubPagesForGAP/
-readme: README.md
-packageinfo: https://gap-system.github.io/GitHubPagesForGAP/PackageInfo.g
-github: https://github.com/gap-system/GitHubPagesForGAP
+www: http://schmidt.nuigalway.ie/tomlib
+readme: README
+packageinfo: http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.gz
-    - name: .tar.bz2
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.bz2
+      url: http://schmidt.nuigalway.ie/tomlib/tomlib1r2p6.tar.gz
 
 abstract: |
-    This is a pseudo package that contains no actual  <span class="pkgname">GAP</span> code. Instead, it is a template for other  GAP packages that allows to quickly setup GitHub Pages.
+    The package contains the <span class="pkgname">GAP</span> Library of Tables of Marks
 
-status: other
+status: deposited
 doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 keywords: |
-    GitHub Pages, GAP.
+    table of marks, Burnside matrix, subgroup lattice, finite simple groups, Moebius function, Euler function.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>HTI17</span>]   <b class='BibAuthor'>Horn, M., Thor, A. U. and Itor, J.</b>,
-     <i class='BibTitle'>GitHubPagesForGAP, A GitHub Pages generator for GAP packages,
-             Version 0.2</i>
-     (<span class='BibYear'>2017</span>)<br />
+    [<span class='BibKey'>NP16</span>]   <b class='BibAuthor'>Naughton, L. and Pfeiffer, G.</b>,
+     <i class='BibTitle'>TomLib, The GAP Library of Tables of Marks,
+             Version 1.2.6</i>
+     (<span class='BibYear'>2016</span>)<br />
     (<span class='BibNote'>GAP package</span>),
-    <span class='BibHowpublished'><a href="https://gap-system.github.io/GitHubPagesForGAP/">https://gap-system.github.io/GitHubPagesForGAP/</a></span>.
+    <span class='BibHowpublished'><a href="http://schmidt.nuigalway.ie/tomlib">http://schmidt.nuigalway.ie/tomlib</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ GitHubPagesForGAP0.2,
-      author =           {Horn, M. and Thor, A. U. and Itor, J.},
-      title =            {{GitHubPagesForGAP}, A GitHub Pages generator for GAP packages, {V}ersion 0.2},
-      month =            {Feb},
-      year =             {2017},
+    @misc{ TomLib1.2.6,
+      author =           {Naughton, L. and Pfeiffer, G.},
+      title =            {{TomLib}, The GAP Library of Tables of Marks, {V}ersion 1.2.6},
+      month =            {Nov},
+      year =             {2016},
       note =             {GAP package},
-      howpublished =     {\href                              {https://gap-system.github.io/GitHubPagesForGAP/}
-                          {\texttt{https://gap-system.github.io/}\discretionary
-                          {}{}{}\texttt{GitHubPagesForGAP/}}},
-      keywords =         {GitHub Pages; GAP},
-      printedkey =       {HTI17}
+      howpublished =     {\href {http://schmidt.nuigalway.ie/tomlib} {\texttt{http://schmidt.nuigalway.ie/}\discretionary {}{}{}\texttt{tomlib}}},
+      keywords =         {table of marks; Burnside matrix; subgroup lattice; finite simple groups; Moebius function; Euler function},
+      printedkey =       {NP16}
     }
 

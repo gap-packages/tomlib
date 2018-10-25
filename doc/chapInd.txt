@@ -1,0 +1,31 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XACLT[102X 1.4-6 
+  [2XAFLT[102X 1.4-6 
+  [2XAllLibTomNames[102X 1.4-7 
+  Burnside matrix 1.1 
+  [2XConvertToLibTom[102X 1.4-4 
+  [2XFusionsOfLibTom[102X 1.4-9  1.4-9 
+  [2XFusionsToLibTom[102X 1.4-10  1.4-10 
+  [2XHumanReadableDefinition[102X 1.5-2 
+  [2XIsLibTomRep[102X 1.4-2 
+  [2XIsStandardGeneratorsOfGroup[102X 1.5-4 
+  [2XLIBTOM[102X 1.4-6 
+  [2XLIBTOMKNOWN[102X 1.4-1 
+  [2XNamesLibTom[102X 1.4-8  1.4-8 
+  [2XNotifiedFusionsOfLibTom[102X 1.4-9  1.4-9 
+  [2XNotifiedFusionsToLibTom[102X 1.4-10  1.4-10 
+  [2XScriptFromString[102X 1.5-2 
+  [2XSetActualLibFileName[102X 1.4-5 
+  [2XStandardGeneratorsFunctions[102X 1.5-3 
+  [2XStandardGeneratorsInfo[102X, for groups 1.5-1 
+      for tables of marks 1.5-6 
+  [2XStandardGeneratorsOfGroup[102X 1.5-5 
+  table of marks 1.1 
+  [2XTableOfMarksFromLibrary[102X 1.4-3 
+  [2XUnloadTableOfMarksData[102X 1.4-11 
+  
+  
+  -------------------------------------------------------

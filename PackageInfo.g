@@ -1,102 +1,135 @@
 #############################################################################
 ##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
-##
-
+##  PackageInfo.g for the GAP 4 package TomLib                  Liam Naughton
+##  
 SetPackageInfo( rec(
-
-PackageName := "GitHubPagesForGAP",
-
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
-
+PackageName :=
+  "TomLib",
+MyVersion :=
+  "1r2p6",
+MyWWWHome :=
+  "http://schmidt.nuigalway.ie",
+Subtitle :=
+  "The GAP Library of Tables of Marks",
+Version :=
+  JoinStringsWithSeparator( SplitString( ~.MyVersion, "rp" ), "." ),
+Date :=
+  # "06/05/2002" // Version 1.0  # the release date of GAP 4.3
+  # "18/12/2003" // Version 1.1.1
+  # "26/02/2004" // Version 1.1.2
+  # "28/09/2007" // Version 1.1.3
+  # "20/11/2008" // Version 1.1.4
+  # "06/08/2009" // Version 1.1.5
+  # "06/04/2011" // Version 1.2.1
+  # "30/09/2011" // Version 1.2.2
+  # "10/10/2013" // Version 1.2.3
+  # "10/11/2013" // Version 1.2.4
+  # "21/11/2014" // Version 1.2.5
+"07/11/2016",
+PackageWWWHome :=
+  Concatenation( ~.MyWWWHome, "/", LowercaseString( ~.PackageName ) ),
+ArchiveURL :=
+  Concatenation( ~.PackageWWWHome, "/", LowercaseString( ~.PackageName ),
+                 ~.MyVersion ),
+ArchiveFormats :=
+  ".tar.gz",
 Persons := [
-  rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
+rec(
+    LastName := "Naughton",
+    FirstNames := "Liam",
+    IsAuthor := false,
+    IsMaintainer := true,
+    Email := "l.naughton@wlv.ac.uk",
+    WWWHome := ~.MyWWWHome,
+    Place := "Wolverhampton",
+    Institution := "School of Mathematics and Computer Science, University of Wolverhampton",
+    PostalAddress := Concatenation( [
+      "Liam Naughton\n",
+      "School of Mathematics and Computer Science\n",
+      "University of Wolverhampton\n",
+      "Wulfruna Street\n",
+      "Wolverhampton\n",
+      "United Kingdom\n",
+      "WV1 1LY"
+      ] )
   ),
-
-  rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
+rec(
+    LastName := "Pfeiffer",
+    FirstNames := "Götz",
+    IsAuthor := true,
+    IsMaintainer := false,
+    Email := "goetz.pfeiffer@nuigalway.ie",
+#   WWWHome := 
+    Place := "Galway"
+#   Institution := "",
+#   PostalAddress := Concatenation( [
+#     ] )
   ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
-],
-
-Status := "other",
-
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
-
-PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
-),
-
-# The following dependencies are fake and for testing / demo purposes
-Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
   ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
-  ExternalConditions := []
+Status :=
+  "deposited",
+#CommunicatedBy :=
+#  "name (place)",
+#AcceptDate :=
+#  "MM/YYYY",
+README_URL :=
+  Concatenation( ~.PackageWWWHome, "/README" ),
+PackageInfoURL :=
+  Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+AbstractHTML := Concatenation( [
+  "The package contains the <span class=\"pkgname\">GAP</span> ",
+  "Library of Tables of Marks"
+  ] ),
+PackageDoc := rec(
+  BookName :=
+    "TomLib",
+  ArchiveURLSubset :=
+    [ "doc", "htm" ],
+  HTMLStart :=
+    "doc/chap0.html",
+  PDFFile :=
+    "doc/manual.pdf",
+  SixFile :=
+    "doc/manual.six",
+  LongTitle :=
+    "The GAP Library of Tables of Marks"
+  ),
+Dependencies := rec(
+  GAP :=
+    ">= 4.4",
+  NeededOtherPackages :=
+    [ ["atlasrep", ">= 1.5"] ],
+  SuggestedOtherPackages :=
+    [ ["ctbllib", ">= 1.1"] ], # [["gpisotyp", ">= 1.0"]],
+  ExternalConditions :=
+    []
+  ),
+AvailabilityTest :=
+  ReturnTrue,
+TestFile :=
+  "tst/testall.g",
+Keywords :=
+  [ "table of marks", "Burnside matrix", "subgroup lattice",
+    "finite simple groups", "Moebius function", "Euler function" ],
+
+AutoDoc := rec(
+    TitlePage := rec(
+        Copyright := """
+            &copyright; 2016 We adopt the copyright regulations of GAP as
+            detailed in the copyright notice in the GAP manual.
+            """,
+
+        Acknowledgements := """
+            This documentation was prepared with the <Package>GAPDoc</Package>
+            package by Frank Lübeck and Max Neunhöffer.
+            """,
+    )
 ),
 
-AvailabilityTest := ReturnTrue,
 
-Keywords := ["GitHub Pages", "GAP"]
+) );
 
-));
-
+#############################################################################
+##  
+#E
 

@@ -1,0 +1,469 @@
+  
+  [1X1 [33X[0;0YThe GAP Table of Marks Library[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YTables Of Marks[133X[101X
+  
+  [33X[0;0YThe  concept  of  a  [13XTable of Marks[113X was introduced by W.Burnside in his book
+  ``Theory  of Groups of Finite Order'' [Bur55]. Therefore a table of marks is
+  sometimes  called  a [13XBurnside matrix[113X. The table of marks of a finite group [22XG[122X
+  is  a matrix whose rows and columns are labelled by the conjugacy classes of
+  subgroups  of  [22XG[122X and where for two subgroups [22XH[122X and [22XK[122X the [22X(H, K)[122X–entry is the
+  number of fixed points of [22XK[122X in the transitive action of [22XG[122X on the cosets of [22XH[122X
+  in  [22XG[122X.  So  the  table  of  marks  characterizes  the set of all permutation
+  representations  of  [22XG[122X.  Moreover,  the  table  of  marks  gives  a  compact
+  description  of  the  subgroup lattice of [22XG[122X, since from the numbers of fixed
+  points  the  numbers of conjugates of a subgroup [22XK[122X contained in a subgroup [22XH[122X
+  can  be derived. For small groups the table of marks of [22XG[122X can be constructed
+  directly  in  GAP  by  first  computing  the  entire  subgroup lattice of [22XG[122X.
+  However, for larger groups this method is unfeasible. The GAP Table of Marks
+  library  provides access to several hundred table of marks and their maximal
+  subgroups.[133X
+  
+  
+  [1X1.2 [33X[0;0YInstalling The Table of Marks Library[133X[101X
+  
+  [33X[0;0YDownload  the  archives in your preferred format. Unpack the archives inside
+  the pkg dirctory of your GAP installation. Load the package[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage("tomlib");[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.3 [33X[0;0YContents[133X[101X
+  
+  [33X[0;0YTomLib  contains several hundred tables of marks. For a complete list of the
+  contents of the library do the following.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnames:=AllLibTomNames();;[127X[104X
+    [4X[25Xgap>[125X [27X"A5" in names;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe current version of the tomlib contains the tables of marks of the groups
+  listed  below  as  well as the tables of many of their maximal subgroups and
+  automorphism groups. The Alternating groups [22XA_n[122X[133X
+  
+  [30X    [33X[0;6Yfor [22Xn = 5, 6, 7, 8, 9, 10, 11, 12, 13[122X.[133X
+  
+  [33X[0;0YThe Symmetric groups [22XS_n[122X[133X
+  
+  [30X    [33X[0;6Yfor [22Xn = 4, 5, 6, 7, 8, 9, 10, 11, 12, 13[122X.[133X
+  
+  [33X[0;0YThe Linear groups [22XL_2(n)[122X for[133X
+  
+  [30X    [33X[0;6Y[22Xn  = 7, 8, 11, 13, 16, 17, 19, 23, 25, 27, 29, 31, 32, 37, 41, 43, 47,
+        49, 53[122X[133X
+  
+  [30X    [33X[0;6Y[22Xn  =  59,  61, 64, 67, 71, 73, 79, 81, 83, 89, 97, 101, 103, 107, 109,
+        113, 121, 125 .[122X[133X
+  
+  [33X[0;0Yalong with[133X
+  
+  [30X    [33X[0;6Y[22XL_3(4), L_3(3), L_3(5), L_3(7), L_3(9)[122X[133X
+  
+  [30X    [33X[0;6Y[22XL_4(3), L_3(8), L_3(11)[122X.[133X
+  
+  [33X[0;0YThe Unitary groups[133X
+  
+  [30X    [33X[0;6Y[22XU_3(3), U_4(3), U_3(5), U_3(4), U_3(11), U_3(7), U_3(8)[122X[133X
+  
+  [30X    [33X[0;6Y[22XU_3(9), U_4(2), U_5(2)[122X[133X
+  
+  [33X[0;0YThe Sporadic Groups[133X
+  
+  [30X    [33X[0;6Y[22XCo_3, HS, McL, He, J_1, J_2, J_3, M_11, M_12, M_22, M_23, M_24[122X[133X
+  
+  [33X[0;0YThe  names  given  to each subgroup are consistent with those used in Robert
+  Wilson's  atlas  [WWT+] For example if you wish to access the table of marks
+  of  the  maximal  subgroup  [22X"5:4  ×  A5"[122X  of  the  Higman-Sims  group do the
+  following:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTableOfMarks("5:4xA5");[127X[104X
+    [4X[28XTableOfMarks( "5:4xA5" )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.4 [33X[0;0YAdministrative Functions[133X[101X
+  
+  [33X[0;0YHere  we  document  some  of  the  administrative facilities for the the [5XGAP[105X
+  library of tables of marks.[133X
+  
+  [1X1.4-1 LIBTOMKNOWN[101X
+  
+  [33X[1;0Y[29X[2XLIBTOMKNOWN[102X[32X global variable[133X
+  
+  [33X[0;0Y[10XLIBTOMKNOWN[110X  is  a record that controls the loading of data files of the [5XGAP[105X
+  library of tables of marks. It has the following components.[133X
+  
+  [8X[10XACTUAL[110X[8X [108X
+        [33X[0;6Ythe   name   of   the   file   to  be  read  at  the  moment  (set  by
+        [10XSetActualLibFileName[110X),[133X
+  
+  [8X[10XLOADSTATUS[110X[8X [108X
+        [33X[0;6Ya  record whose components are names of files in the library of tables
+        of  marks,  with  value  a  list whose first entry is one of [10X"loaded"[110X,
+        [10X"unloaded"[110X,  [10X"userloaded"[110X  and  whose  second entry is an integer that
+        controls  when  the  corresponding tables of marks can be removed from
+        [5XGAP[105X,[133X
+  
+  [8X[10XMAX[110X[8X [108X
+        [33X[0;6Y[5XGAP[105X  remembers at most [10XMAX[110X of the previously loaded library files (the
+        default value is [22X10[122X),[133X
+  
+  [8X[10XUNLOAD[110X[8X [108X
+        [33X[0;6Yis  it  allowed  to  remove previously loaded library files (is set to
+        [9Xtrue[109X by default),[133X
+  
+  [8X[10XSTDGEN[110X[8X [108X
+        [33X[0;6Ya  list  describing standard generators of almost simple groups in the
+        table of marks library.[133X
+  
+  [33X[0;0YAdditionally  the  names  of the files already loaded occur as components of
+  [10XLIBTOMKNOWN[110X; the corresponding values are given by the data of the files.[133X
+  
+  [1X1.4-2 IsLibTomRep[101X
+  
+  [33X[1;0Y[29X[2XIsLibTomRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YLibrary  tables of marks have their own representation. [10XIsLibTomRep[110X tests if
+  [3Xobj[103X is a library representation.[133X
+  
+  [1X1.4-3 TableOfMarksFromLibrary[101X
+  
+  [33X[1;0Y[29X[2XTableOfMarksFromLibrary[102X( [3Xstring[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ythe table of marks with name [3Xstring[103X.[133X
+  
+  [1X1.4-4 ConvertToLibTom[101X
+  
+  [33X[1;0Y[29X[2XConvertToLibTom[102X( [3Xrecord[103X ) [32X function[133X
+  
+  [33X[0;0Y[10XConvertToLibTom[110X     converts     a     record     with    components    from
+  [10XTableOfMarksComponents[110X  into  a  library  table  of  marks  object  with the
+  corresponding attribute values set.[133X
+  
+  [1X1.4-5 SetActualLibFileName[101X
+  
+  [33X[1;0Y[29X[2XSetActualLibFileName[102X( [3Xfilename[103X ) [32X function[133X
+  
+  [33X[0;0YSets the file name for [3Xfilename[103X.[133X
+  
+  [1X1.4-6 LIBTOM[101X
+  
+  [33X[1;0Y[29X[2XLIBTOM[102X( [3Xarg[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XAFLT[102X( [3Xsource[103X, [3Xdestination[103X, [3Xfusion[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XACLT[102X( [3Xidentifier[103X, [3Xcomponent[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0YThe  library  format  of  a library table of marks is a call to the function
+  [10XLIBTOM[110X, with the arguments sorted as in [10XTableOfMarksComponents[110X .[133X
+  
+  [33X[0;0Y[10XAFLT[110X adds a fusion map [3Xvalue[103X from the table of marks with name [3Xsource[103X to the
+  table  of  marks with name [3Xdestination[103X. The fusion map is a list of positive
+  integers,  storing  at  position  [22Xi[122X the position of the class in [3Xdestination[103X
+  that contains the subgroups in the [22Xi[122X-th class of [3Xsource[103X.[133X
+  
+  [33X[0;0Y[10XACLT[110X adds the value [3Xvalue[103X of a component with name [3Xcomponent[103X to the table of
+  marks with identifier value [3Xidentifier[103X in the library of tables of marks.[133X
+  
+  [1X1.4-7 AllLibTomNames[101X
+  
+  [33X[1;0Y[29X[2XAllLibTomNames[102X(  ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ya list containing all names of available library tables of marks.[133X
+  
+  [1X1.4-8 NamesLibTom[101X
+  
+  [33X[1;0Y[29X[2XNamesLibTom[102X( [3Xstring[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNamesLibTom[102X( [3Xtom[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yall  names  of  the library table [3Xtom[103X or of the library table with
+            name [3Xstring[103X[133X
+  
+  [1X1.4-9 NotifiedFusionsOfLibTom[101X
+  
+  [33X[1;0Y[29X[2XNotifiedFusionsOfLibTom[102X( [3Xtom[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNotifiedFusionsOfLibTom[102X( [3Xstring[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFusionsOfLibTom[102X( [3Xtom[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFusionsOfLibTom[102X( [3Xstring[103X ) [32X attribute[133X
+  
+  [33X[0;0YAre  there  any  fusions from the library table of marks [3Xtom[103X or the table of
+  marks with name [3Xstring[103X into other library tables marks?[133X
+  
+  [33X[0;0Y[10XNotifiedFusionsOfLibTom[110X  returns  the  names  of  all  such tables of marks.
+  [10XFusionsOfLibTom[110X returns the complete fusion maps. For that the corresponding
+  library file has to be loaded.[133X
+  
+  [1X1.4-10 NotifiedFusionsToLibTom[101X
+  
+  [33X[1;0Y[29X[2XNotifiedFusionsToLibTom[102X( [3Xtom[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNotifiedFusionsToLibTom[102X( [3Xstring[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFusionsToLibTom[102X( [3Xtom[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFusionsToLibTom[102X( [3Xstring[103X ) [32X attribute[133X
+  
+  [33X[0;0YAre  there any fusions from other library table of marks to [3Xtom[103X or the table
+  of marks with name [3Xstring[103X.[133X
+  
+  [33X[0;0Y[10XNotifiedFusionsToLibTom[110X  returns  the  names  of  all  such tables of marks.
+  [10XFusionsToLibTom[110X returns the complete fusion maps. For that, the correponding
+  library files have to be loaded.[133X
+  
+  [1X1.4-11 UnloadTableOfMarksData[101X
+  
+  [33X[1;0Y[29X[2XUnloadTableOfMarksData[102X(  ) [32X function[133X
+  
+  [33X[0;0Y[10XUnloadTableOfMarksData[110X clears the cache of tables of marks. This can be used
+  to free up to several hundred megabytes of space in the current [5XGAP[105X session.[133X
+  
+  
+  [1X1.5 [33X[0;0YStandard Generators of Groups[133X[101X
+  
+  [33X[0;0YAn  [22Xs[122X-tuple of [13Xstandard generators[113X of a given group [22XG[122X is a vector [22X(g_1, g_2,
+  ...,  g_s)[122X  of  elements [22Xg_i ∈ G[122X satisfying certain conditions (depending on
+  the isomorphism type of [22XG[122X) such that[133X
+  
+  [31X1[131X   [33X[0;6Y[22X⟨ g_1, g_2, ..., g_s ⟩ = G[122X and[133X
+  
+  [31X2[131X   [33X[0;6Ythe  vector  is unique up to automorphisms of [22XG[122X, i.e., for two vectors
+        [22X(g_1,  g_2, ..., g_s)[122X and [22X(h_1, h_2, ..., h_s)[122X of standard generators,
+        the map [22Xg_i ↦ h_i[122X extends to an automorphism of [22XG[122X.[133X
+  
+  [33X[0;0YFor details about standard generators, see [Wil96].[133X
+  
+  [1X1.5-1 StandardGeneratorsInfo[101X
+  
+  [33X[1;0Y[29X[2XStandardGeneratorsInfo[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0YWhen  called  with  the  group  [3XG[103X,  [2XStandardGeneratorsInfo[102X returns a list of
+  records  with  at  least  one of the components [10Xscript[110X and [10Xdescription[110X. Each
+  such  record defines [13Xstandard generators[113X of groups isomorphic to [3XG[103X, the [22Xi[122X-th
+  record  is  referred  to  as  the  [22Xi[122X-th  set of standard generators for such
+  groups.  The  value  of  [10Xscript[110X  is  a  dense list of lists, each encoding a
+  command that has one of the following forms.[133X
+  
+  [8XA [13Xdefinition[113X [22X[ i, n, k ][122X or [22X[ i, n ][122X[108X
+        [33X[0;6Ymeans  to search for an element of order [22Xn[122X, and to take its [22Xk[122X-th power
+        as candidate for the [22Xi[122X-th standard generator (the default for [22Xk[122X is [22X1[122X),[133X
+  
+  [8Xa [13Xrelation[113X [22X[ i_1, k_1, i_2, k_2, ..., i_m, k_m, n ][122X with [22Xm > 1[122X[108X
+        [33X[0;6Ymeans  a  check  whether  the  element  [22Xg_{i_1}^{k_1}  g_{i_2}^{k_2} ⋯
+        g_{i_m}^{k_m}[122X  has  order  [22Xn[122X;  if  [22Xg_j[122X  occurs then of course the [22Xj[122X-th
+        generator must have been defined before,[133X
+  
+  [8Xa [13Xrelation[113X [22X[ [ i_1, i_2, ..., i_m ], [3Xslp[103X[8X, n ][122X[108X
+        [33X[0;6Ymeans  a  check  whether  the  result of the straight line program [3Xslp[103X
+        (see [14X'Reference:  Straight  Line  Programs'[114X) applied to the candidates
+        [22Xg_{i_1},  g_{i_2},  ..., g_{i_m}[122X has order [22Xn[122X, where the candidates [22Xg_j[122X
+        for the [22Xj[122X-th standard generators must have been defined before,[133X
+  
+  [8Xa [13Xcondition[113X [22X[ [ i_1, k_1, i_2, k_2, ..., i_m, k_m ], f, v ][122X[108X
+        [33X[0;6Ymeans   a   check   whether  the  [5XGAP[105X  function  in  the  global  list
+        [2XStandardGeneratorsFunctions[102X  ([14X1.5-3[114X) that is followed by the list [22Xf[122X of
+        strings returns the value [22Xv[122X when it is called with [22XG[122X and [22Xg_{i_1}^{k_1}
+        g_{i_2}^{k_2} ⋯ g_{i_m}^{k_m}[122X.[133X
+  
+  [33X[0;0YOptional components of the returned records are[133X
+  
+  [8X[10Xgenerators[110X[8X[108X
+        [33X[0;6Ya string of names of the standard generators,[133X
+  
+  [8X[10Xdescription[110X[8X[108X
+        [33X[0;6Ya  string describing the [10Xscript[110X information in human readable form, in
+        terms of the [10Xgenerators[110X value,[133X
+  
+  [8X[10Xclassnames[110X[8X[108X
+        [33X[0;6Ya  list  of  strings,  the  [22Xi[122X-th entry being the name of the conjugacy
+        class  containing  the [22Xi[122X-th standard generator, according to the [5XAtlas[105X
+        character table of the group (see [2XClassNames[102X ([14XReference: ClassNames[114X)),
+        and[133X
+  
+  [8X[10XATLAS[110X[8X[108X
+        [33X[0;6Ya boolean; [9Xtrue[109X means that the standard generators coincide with those
+        defined  in  Rob Wilson's [5XAtlas[105X of Group Representations (see [WWT+]),
+        and [9Xfalse[109X means that this property is not guaranteed.[133X
+  
+  [8X[10Xstandardization[110X[8X[108X
+        [33X[0;6Ya positive integer [22Xi[122X; Whenever [10XATLAS[110X returns [9Xtrue[109X the value of [22Xi[122X means
+        that the generators stored in the group are standard generators w.r.t.
+        standardization  [22Xi[122X,  in  the  sense  of  Rob  Wilson's  [5XAtlas[105X of Group
+        Representations.[133X
+  
+  [33X[0;0YThere  is  no  default  method  for  an arbitrary isomorphism type, since in
+  general the definition of standard generators is not obvious.[133X
+  
+  [33X[0;0YThe function [2XStandardGeneratorsOfGroup[102X ([14XStandardGeneratorsOfGroup???[114X) can be
+  used to find standard generators of a given group isomorphic to [3XG[103X.[133X
+  
+  [33X[0;0YThe  [10Xgenerators[110X  and  [10Xdescription[110X  values,  if not known, can be computed by
+  [2XHumanReadableDefinition[102X ([14X1.5-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStandardGeneratorsInfo( TableOfMarks( "L3(3)" ) );[127X[104X
+    [4X[28X[ rec( ATLAS := true, [128X[104X
+    [4X[28X    description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [128X[104X
+    [4X[28X    generators := "a, b", [128X[104X
+    [4X[28X    script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [128X[104X
+    [4X[28X        [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ], [128X[104X
+    [4X[28X    standardization := 1 ) ][128X[104X
+  [4X[32X[104X
+  
+  [1X1.5-2 HumanReadableDefinition[101X
+  
+  [33X[1;0Y[29X[2XHumanReadableDefinition[102X( [3Xinfo[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XScriptFromString[102X( [3Xstring[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xinfo[103X  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[102X
+  ([14X1.5-1[114X).   [2XHumanReadableDefinition[102X  returns  a  string  that  describes  the
+  definition  of  standard generators given by the [10Xscript[110X component of [3Xinfo[103X in
+  human  readable  form.  The  names  of  the  generators  are  taken from the
+  [10Xgenerators[110X   component   (default   names  [10X"a"[110X,  [10X"b"[110X  etc. are  computed  if
+  necessary), and the result is stored in the [10Xdescription[110X component.[133X
+  
+  [33X[0;0Y[2XScriptFromString[102X  does  the  converse  of  [2XHumanReadableDefinition[102X, i.e., it
+  takes  a string [3Xstring[103X as returned by [2XHumanReadableDefinition[102X, and returns a
+  corresponding [10Xscript[110X list.[133X
+  
+  [33X[0;0YIf  [21Xcondition[121X lines occur in the script (see [2XStandardGeneratorsInfo[102X ([14X1.5-1[114X))
+  then     the     functions    that    occur    must    be    contained    in
+  [2XStandardGeneratorsFunctions[102X ([14X1.5-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xscr:= ScriptFromString( "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4" );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [ 1, 1, 2, 1, 13 ], [128X[104X
+    [4X[28X  [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xinfo:= rec( script:= scr );[127X[104X
+    [4X[28Xrec( script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [128X[104X
+    [4X[28X      [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XHumanReadableDefinition( info );[127X[104X
+    [4X[28X"|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4"[128X[104X
+    [4X[25Xgap>[125X [27Xinfo;[127X[104X
+    [4X[28Xrec( description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4", [128X[104X
+    [4X[28X  generators := "a, b", [128X[104X
+    [4X[28X  script := [ [ 1, 2 ], [ 2, 3 ], [ [ 2, 1 ], [ "|C(",, ")|" ], 9 ], [128X[104X
+    [4X[28X      [ 1, 1, 2, 1, 13 ], [ 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 4 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X1.5-3 StandardGeneratorsFunctions[101X
+  
+  [33X[1;0Y[29X[2XStandardGeneratorsFunctions[102X[32X global variable[133X
+  
+  [33X[0;0Y[2XStandardGeneratorsFunctions[102X  is  a  list of even length. At position [22X2i-1[122X, a
+  function  of two arguments is stored, which are expected to be a group and a
+  group  element.  At  position [22X2i[122X a list of strings is stored such that first
+  inserting  a  generator name in all holes and then forming the concatenation
+  yields  a  string that describes the function at the previous position; this
+  string must contain the generator enclosed in round brackets [10X([110X and [10X)[110X.[133X
+  
+  [33X[0;0YThis   list  is  used  by  the  functions  [2XStandardGeneratorsInfo[102X  ([14X1.5-1[114X)),
+  [2XHumanReadableDefinition[102X ([14X1.5-2[114X), and [2XScriptFromString[102X ([14X1.5-2[114X). Note that the
+  lists at even positions must be pairwise different.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStandardGeneratorsFunctions{ [ 1, 2 ] };[127X[104X
+    [4X[28X[ function( G, g ) ... end, [ "|C(",, ")|" ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X1.5-4 IsStandardGeneratorsOfGroup[101X
+  
+  [33X[1;0Y[29X[2XIsStandardGeneratorsOfGroup[102X( [3Xinfo[103X, [3XG[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xinfo[103X  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[102X
+  ([14X1.5-1[114X),  [3XG[103X  a  group,  and  [3Xgens[103X  a list of generators for [3XG[103X. In this case,
+  [2XIsStandardGeneratorsOfGroup[102X returns [9Xtrue[109X if [3Xgens[103X satisfies the conditions of
+  the [10Xscript[110X component of [3Xinfo[103X, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YNote  that  the result [9Xtrue[109X means that [3Xgens[103X is a list of standard generators
+  for  [3XG[103X  only if [3XG[103X has the isomorphism type for which [3Xinfo[103X describes standard
+  generators.[133X
+  
+  [1X1.5-5 StandardGeneratorsOfGroup[101X
+  
+  [33X[1;0Y[29X[2XStandardGeneratorsOfGroup[102X( [3Xinfo[103X, [3XG[103X[, [3Xrandfunc[103X] ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xinfo[103X  be  a  record  that  is  valid as value of [2XStandardGeneratorsInfo[102X
+  ([14X1.5-1[114X),  and  [3XG[103X  a  group  of the isomorphism type for which [3Xinfo[103X describes
+  standard  generators. In this case, [2XStandardGeneratorsOfGroup[102X returns a list
+  of standard generators of [3XG[103X, see Section [14X1.5[114X.[133X
+  
+  [33X[0;0YThe optional argument [3Xrandfunc[103X must be a function that returns an element of
+  [3XG[103X when called with [3XG[103X; the default is [2XPseudoRandom[102X ([14XReference: PseudoRandom[114X).[133X
+  
+  [33X[0;0YIn  each  call  to [2XStandardGeneratorsOfGroup[102X ([14XStandardGeneratorsOfGroup???[114X),
+  the  [10Xscript[110X  component  of [3Xinfo[103X is scanned line by line. [3Xrandfunc[103X is used to
+  find  an  element of the prescribed order whenever a definition line is met,
+  and  for  the  relation  and condition lines in the [10Xscript[110X list, the current
+  generator  candidates  are  checked;  if  a  condition is not fulfilled, all
+  candidates  are  thrown  away, and the procedure starts again with the first
+  line.  When  the  conditions are fulfilled after processing the last line of
+  the [10Xscript[110X list, the standard generators are returned.[133X
+  
+  [33X[0;0YNote that if [3XG[103X has the wrong isomorphism type then [2XStandardGeneratorsOfGroup[102X
+  ([14XStandardGeneratorsOfGroup???[114X)  returns a list of elements in [3XG[103X that satisfy
+  the  conditions  of the [10Xscript[110X component of [3Xinfo[103X if such elements exist, and
+  does  not  terminate  otherwise.  In the former case, obviously the returned
+  elements need not be standard generators of [3XG[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa5:= AlternatingGroup( 5 );[127X[104X
+    [4X[28XAlt( [ 1 .. 5 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xinfo:= StandardGeneratorsInfo( TableOfMarks( "A5" ) )[1];[127X[104X
+    [4X[28Xrec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", [128X[104X
+    [4X[28Xgenerators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] ], [128X[104X
+    [4X[28Xstandardization := 1 )[128X[104X
+    [4X[25Xgap>[125X [27XIsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (3,4,5) ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsStandardGeneratorsOfGroup( info, a5, [ (1,3)(2,4), (1,2,3) ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xs5:= SymmetricGroup( 5 );;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction( s5, [ (1,3)(2,4), (3,4,5) ], [127X[104X
+    [4X[25X>[125X [27X       StandardGeneratorsOfGroup( info, a5 ), OnPairs ) <> fail;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X1.5-6 StandardGeneratorsInfo[101X
+  
+  [33X[1;0Y[29X[2XStandardGeneratorsInfo[102X( [3Xtom[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a  table  of  marks  [3Xtom[103X,  a  stored  value  of  [2XStandardGeneratorsInfo[102X
+  ([14XStandardGeneratorsInfo,  for  tables  of marks???[114X) equals the value of this
+  attribute   for   the   underlying  group  (see [2XUnderlyingGroup[102X  ([14XReference:
+  UnderlyingGroup   for   tables   of  marks[114X))  of  [3Xtom[103X,  cf. Section [14XStandard
+  Generators of Groups???[114X.[133X
+  
+  [33X[0;0YIn  this case, the [2XGeneratorsOfGroup[102X ([14XReference: GeneratorsOfGroup[114X) value of
+  the  underlying  group  [22XG[122X of [3Xtom[103X is assumed to be in fact a list of standard
+  generators   for   [22XG[122X;   So   one   should   be   careful  when  setting  the
+  [2XStandardGeneratorsInfo[102X value by hand.[133X
+  
+  [33X[0;0YThere  is no default method to compute the [2XStandardGeneratorsInfo[102X value of a
+  table of marks if it is not yet stored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa5:=TableOfMarks("A5");[127X[104X
+    [4X[25Xgap>[125X [27Xstd:= StandardGeneratorsInfo( a5 );[127X[104X
+    [4X[28X[ rec( ATLAS := true, description := "|a|=2, |b|=3, |ab|=5", [128X[104X
+    [4X[28X    generators := "a, b", script := [ [ 1, 2 ], [ 2, 3 ], [ 1, 1, 2, 1, 5 ] [128X[104X
+    [4X[28X       ], standardization := 1 ) ][128X[104X
+    [4X[25Xgap>[125X [27X# Now find standard generators of an isomorphic group.[127X[104X
+    [4X[25Xgap>[125X [27Xg:= SL(2,4);;[127X[104X
+    [4X[25Xgap>[125X [27Xrepeat[127X[104X
+    [4X[25X>[125X [27X  x:= PseudoRandom( g );[127X[104X
+    [4X[25X>[125X [27Xuntil Order( x ) = 2;[127X[104X
+    [4X[25Xgap>[125X [27Xrepeat  [127X[104X
+    [4X[25X>[125X [27X  y:= PseudoRandom( g );[127X[104X
+    [4X[25X>[125X [27Xuntil Order( y ) = 3 and Order( x*y ) = 5;[127X[104X
+    [4X[25Xgap>[125X [27X# Compute a representative w.r.t. these generators.[127X[104X
+    [4X[25Xgap>[125X [27XRepresentativeTomByGenerators( a5, 4, [ x, y ] );[127X[104X
+    [4X[28XGroup([ [ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ],[128X[104X
+    [4X[28X  [ [ Z(2^2), Z(2^2)^2 ], [ Z(2^2)^2, Z(2^2) ] ] ])[128X[104X
+    [4X[25Xgap>[125X [27X# Show that the new generators are really good.[127X[104X
+    [4X[25Xgap>[125X [27Xgrp:= UnderlyingGroup( a5 );;[127X[104X
+    [4X[25Xgap>[125X [27Xiso:= GroupGeneralMappingByImages( grp, g,[127X[104X
+    [4X[25X>[125X [27X             GeneratorsOfGroup( grp ), [ x, y ] );;[127X[104X
+    [4X[25Xgap>[125X [27XIsGroupHomomorphism( iso );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsBijective( iso );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

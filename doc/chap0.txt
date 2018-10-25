@@ -1,1 +1,78 @@
-Placeholder
+  
+  
+                                    [1X TomLib [101X
+  
+  
+                      [1X The [5XGAP[105X Library of Tables of Marks [101X
+  
+  
+                                     1.2.6
+  
+  
+                                7 November 2016
+  
+  
+                                 Liam Naughton
+  
+                                 Götz Pfeiffer
+  
+  
+  
+  Liam Naughton
+      Email:    [7Xmailto:l.naughton@wlv.ac.uk[107X
+      Homepage: [7Xhttp://schmidt.nuigalway.ie[107X
+      Address:  [33X[0;14YLiam Naughton[133X
+                [33X[0;14YSchool of Mathematics and Computer Science[133X
+                [33X[0;14YUniversity of Wolverhampton[133X
+                [33X[0;14YWulfruna Street[133X
+                [33X[0;14YWolverhampton[133X
+                [33X[0;14YUnited Kingdom[133X
+                [33X[0;14YWV1 1LY[133X
+  
+  
+  Götz Pfeiffer
+      Email:    [7Xmailto:goetz.pfeiffer@nuigalway.ie[107X
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0Y©  2016  We  adopt  the  copyright  regulations  of  GAP  as detailed in the
+  copyright notice in the GAP manual.[133X
+  
+  
+  -------------------------------------------------------
+  [1XAcknowledgements[101X
+  [33X[0;0YThis  documentation was prepared with the [5XGAPDoc[105X package by Frank Lübeck and
+  Max Neunhöffer.[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (tomlib)[101X
+  
+  1 [33X[0;0YThe GAP Table of Marks Library[133X
+    1.1 [33X[0;0YTables Of Marks[133X
+    1.2 [33X[0;0YInstalling The Table of Marks Library[133X
+    1.3 [33X[0;0YContents[133X
+    1.4 [33X[0;0YAdministrative Functions[133X
+      1.4-1 LIBTOMKNOWN
+      1.4-2 IsLibTomRep
+      1.4-3 TableOfMarksFromLibrary
+      1.4-4 ConvertToLibTom
+      1.4-5 SetActualLibFileName
+      1.4-6 LIBTOM
+      1.4-7 AllLibTomNames
+      1.4-8 NamesLibTom
+      1.4-9 NotifiedFusionsOfLibTom
+      1.4-10 NotifiedFusionsToLibTom
+      1.4-11 UnloadTableOfMarksData
+    1.5 [33X[0;0YStandard Generators of Groups[133X
+      1.5-1 StandardGeneratorsInfo
+      1.5-2 HumanReadableDefinition
+      1.5-3 StandardGeneratorsFunctions
+      1.5-4 IsStandardGeneratorsOfGroup
+      1.5-5 StandardGeneratorsOfGroup
+      1.5-6 StandardGeneratorsInfo
+  
+  
+  [32X
