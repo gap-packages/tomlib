@@ -1,71 +1,12 @@
-<?xml version="2.1" encoding="ISO-8859-1"?>
+<?xml version="2.1" encoding="utf-8"?>
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd" [<!ENTITY ATLAS "<Package>Atlas</Package>">]>
 
-<Book Name="tomlib">                                        <!-- REQUIRED -->
-	
-	<!--
-	    The title page
-	    -->
-	<TitlePage>    
-		<!-- REQUIRED -->
-		<Title>                                             
-			<Package>The GAP Table Of Marks Library</Package>
-		</Title>
-		
-		<Subtitle>     	                                     <!-- OPTIONAL -->
-			<Br/>
-			
-			&nbsp;
-		</Subtitle>
-		
-		<Version>Version 1.2.6</Version> 
-		<!-- OPTIONAL -->
-		<Author> 
-			Liam Naughton<Br/>                <!-- REQUIRED -->
-			Goetz Pfeiffer<Br/>
-			&nbsp;
-			<Address>
-				School of Mathematics, Statistics and Applied Mathematics<Br/>
-				National University of Ireland Galway,<Br/>
-				Galway,<Br/>
-				Ireland.
-			</Address>
-			<Email> l.naughton@wlv.ac.uk, goetz.pfeiffer@nuigalway.ie</Email>
-			<Homepage>http://schmidt.nuigalway.ie/tomlib</Homepage>
-		</Author> 
-		
-		<Date>November 2016</Date> 
-		<!-- OPTIONAL -->
-		
-		<Copyright> 
-			<!-- OPTIONAL -->
-			&copyright; 2016 We adopt the copyright regulations of GAP as detailed in the copyright notice in the GAP manual.
-		</Copyright> 
-		
-		<Acknowledgements> 
-			<!-- OPTIONAL -->
-			<P/>
-			
-			
-			<P/>This documentation was prepared with the <Package>GAPDoc</Package> package 
-			by Frank Luebeck and Max Neunhoffer. 
-		</Acknowledgements>
-		
-	</TitlePage>
-	
-	
-	
-	<TableOfContents/>                                    <!-- OPTIONAL -->
-	
-	
-	
-	<!--
-	    The document
-	    -->
-	<Body>                                                <!-- REQUIRED -->
-		
-		
+<Book Name="tomlib">
+  <#Include SYSTEM "title.xml">
+  <TableOfContents/>
+  <Body>
+
   <Chapter>
 	  <Heading>The GAP Table of Marks Library</Heading>
 	  

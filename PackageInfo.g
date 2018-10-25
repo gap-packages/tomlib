@@ -42,10 +42,10 @@ rec(
     Email := "l.naughton@wlv.ac.uk",
     WWWHome := ~.MyWWWHome,
     Place := "Wolverhampton",
-    Institution := "School of Mathematics & Computer Science, University of Wolverhampton",
+    Institution := "School of Mathematics and Computer Science, University of Wolverhampton",
     PostalAddress := Concatenation( [
       "Liam Naughton\n",
-      "School of Mathematics & Computer Science\n",
+      "School of Mathematics and Computer Science\n",
       "University of Wolverhampton\n",
       "Wulfruna Street\n",
       "Wolverhampton\n",
@@ -55,7 +55,7 @@ rec(
   ),
 rec(
     LastName := "Pfeiffer",
-    FirstNames := "G&ouml;tz",
+    FirstNames := "Götz",
     IsAuthor := true,
     IsMaintainer := false,
     Email := "goetz.pfeiffer@nuigalway.ie",
@@ -111,6 +111,22 @@ TestFile :=
 Keywords :=
   [ "table of marks", "Burnside matrix", "subgroup lattice",
     "finite simple groups", "Moebius function", "Euler function" ],
+
+AutoDoc := rec(
+    TitlePage := rec(
+        Copyright := """
+            &copyright; 2016 We adopt the copyright regulations of GAP as
+            detailed in the copyright notice in the GAP manual.
+            """,
+
+        Acknowledgements := """
+            This documentation was prepared with the <Package>GAPDoc</Package>
+            package by Frank Lübeck and Max Neunhöffer.
+            """,
+    )
+),
+
+
 ) );
 
 #############################################################################
