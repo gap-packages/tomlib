@@ -83,8 +83,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunita_tom :=
-    "@(#)$Id: tmunita.tom,v 4.8 2003/12/15 09:45:31 gap Exp $";
 
 SetActualLibFileName("tmunita");
 

@@ -9,8 +9,6 @@
 ##  This file contains the declarations needed for dealing with standard
 ##  generators of finite groups.
 ##
-Revision.stdgen_gd :=
-    "@(#)$Id: stdgen.gd,v 1.6 2010/09/28 16:47:46 alexk Exp $";
 
 
 #T TO DO:

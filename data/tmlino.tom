@@ -49,8 +49,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmlino_tom :=
-    "@(#)$Id: tmlino.tom,v 4.2 2001/07/05 07:02:06 gap Exp $";
 
 SetActualLibFileName("tmlino");
 LIBTOM( "L3(4)",

@@ -62,8 +62,6 @@
 #H  T.Merkwitz
 #H  ==========================================================================
 #H
-Revision.tmco3_tom :=
-    "@(#)$Id: tmco3.tom,v 4.4 2003/12/16 17:29:42 gap Exp $";
 
 SetActualLibFileName("tmco3");
 

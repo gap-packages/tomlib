@@ -55,8 +55,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmmath_tom :=
-    "@(#)$Id: tmmath.tom,v 4.3 2001/07/05 07:05:41 gap Exp $";
 
 SetActualLibFileName("tmmath");
 LIBTOM( "M11",

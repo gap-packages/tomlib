@@ -66,8 +66,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmlin2_tom :=
-    "@(#)$Id: tmlin2.tom,v 4.5 2001/07/05 07:01:36 gap Exp $";
 
 SetActualLibFileName("tmlin2");
 LIBTOM( "L2(11)",

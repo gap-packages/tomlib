@@ -9,8 +9,6 @@
 ##  This file contains the implementations needed for dealing with standard
 ##  generators of finite groups.
 ##
-Revision.stdgen_gi :=
-    "@(#)$Id: stdgen.gi,v 1.1 2002/02/20 17:21:29 gap Exp $";
 
 
 #############################################################################

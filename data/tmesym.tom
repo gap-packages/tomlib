@@ -48,8 +48,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmesym_tom :=
-    "@(#)$Id: tmesym.tom,v 4.2 2001/07/05 06:59:03 gap Exp $";
 
 SetActualLibFileName("tmesym");
 LIBTOM( "2^4:S5`",

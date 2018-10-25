@@ -68,8 +68,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmtwmx_tom :=
-    "@(#)$Id: tmtwmx.tom,v 4.5 2003/12/15 09:59:52 gap Exp $";
 
 SetActualLibFileName("tmtwmx");
 LIBTOM( "2^(3+3):7",

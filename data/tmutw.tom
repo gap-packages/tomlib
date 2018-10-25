@@ -48,8 +48,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmutw_tom :=
-    "@(#)$Id: tmutw.tom,v 4.2 2001/07/05 07:21:34 gap Exp $";
 
 SetActualLibFileName("tmutw");
 LIBTOM( "G2(3)",
