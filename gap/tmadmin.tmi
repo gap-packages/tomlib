@@ -9,8 +9,6 @@
 ##  This file contains the implementation part of all functions to
 ##  handle the table of marks library
 ##
-Revision.( "tomlib/gap/tmadmin_tmi" ) :=
-    "@(#)$Id: tmadmin.tmi,v 1.10 2008/01/08 10:48:38 gap Exp $";
 
 
 #############################################################################

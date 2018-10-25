@@ -53,8 +53,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmutwmx_tom :=
-    "@(#)$Id: tmutwmx.tom,v 4.3 2001/07/05 07:21:48 gap Exp $";
 
 SetActualLibFileName("tmutwmx");
 LIBTOM( "(3^(1+2)+x3^2):2S4",

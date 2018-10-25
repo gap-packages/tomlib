@@ -48,8 +48,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tms11_tom :=
-    "@(#)$Id: tms11.tom,v 4.2 2001/07/05 07:17:26 gap Exp $";
 
 SetActualLibFileName("tms11");
 LIBTOM( "S11",

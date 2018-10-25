@@ -49,8 +49,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tms62mx3_tom :=
-    "@(#)$Id: tms62mx3.tom,v 4.2 2001/07/05 07:19:04 gap Exp $";
 
 SetActualLibFileName("tms62mx3");
 LIBTOM( "2^5:S6",

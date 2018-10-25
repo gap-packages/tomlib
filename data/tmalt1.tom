@@ -70,8 +70,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmalt1_tom :=
-    "@(#)$Id: tmalt1.tom,v 4.5 2001/07/05 06:56:41 gap Exp $";
 
 SetActualLibFileName("tmalt1");
 LIBTOM( "A5",

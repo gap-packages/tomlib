@@ -61,8 +61,6 @@
 #H  added new table of marks "3`D4(2)"
 #H  ==========================================================================
 #H
-Revision.tm3d42_tom :=
-    "@(#)$Id: tm3d42.tom,v 4.4 2003/12/16 17:29:39 gap Exp $";
 
 SetActualLibFileName("tm3d42");
 

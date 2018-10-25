@@ -48,8 +48,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tm4l34s3_tom :=
-    "@(#)$Id: tm4l34s3.tom,v 4.2 2001/07/05 06:54:55 gap Exp $";
 
 SetActualLibFileName("tm4l34s3");
 LIBTOM( "2^2.L3(4).3.2_2",

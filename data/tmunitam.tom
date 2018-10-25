@@ -53,8 +53,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunitam_tom :=
-    "@(#)$Id: tmunitam.tom,v 4.3 2003/12/16 17:29:45 gap Exp $";
 
 SetActualLibFileName("tmunitam");
 LIBTOM( "2^(2+4):(3xD10)",

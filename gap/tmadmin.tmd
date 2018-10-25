@@ -9,8 +9,6 @@
 ##  This file contains the declarations of all functions and variables to
 ##  handle the table of marks library.
 ##
-Revision.( "tomlib/gap/tmadmin_tmd" ) :=
-    "@(#)$Id: tmadmin.tmd,v 1.8 2010/05/19 15:56:24 gap Exp $";
 
 
 #############################################################################

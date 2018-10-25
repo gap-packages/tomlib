@@ -48,8 +48,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmunit_tom :=
-    "@(#)$Id: tmunit.tom,v 4.2 2001/07/05 07:20:54 gap Exp $";
 
 SetActualLibFileName("tmunit");
 LIBTOM( "U3(3)",

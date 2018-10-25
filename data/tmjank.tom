@@ -57,8 +57,6 @@
 #H  added new table of marks library file
 #H  ==========================================================================
 #H
-Revision.tmjank_tom :=
-    "@(#)$Id: tmjank.tom,v 4.4 2001/07/05 07:01:14 gap Exp $";
 
 SetActualLibFileName("tmjank");
 LIBTOM( "J1",

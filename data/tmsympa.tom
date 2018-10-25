@@ -49,8 +49,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tmsympa_tom :=
-    "@(#)$Id: tmsympa.tom,v 4.2 2001/07/05 07:19:56 gap Exp $";
 
 SetActualLibFileName("tmsympa");
 LIBTOM( "S4(4).2",

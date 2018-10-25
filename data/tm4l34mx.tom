@@ -61,8 +61,6 @@
 #H  added new table of marks library files
 #H  ==========================================================================
 #H
-Revision.tm4l34mx_tom :=
-    "@(#)$Id: tm4l34mx.tom,v 4.4 2001/07/05 06:54:47 gap Exp $";
 
 SetActualLibFileName("tm4l34mx");
 
