@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/gap-packages/tomlib.svg?branch=master)](https://travis-ci.org/gap-packages/tomlib)
+[![Code Coverage](https://codecov.io/github/gap-packages/tomlib/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/tomlib)
+
 The GAP Library of Tables of Marks
 ==================================
 
