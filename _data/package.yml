@@ -29,7 +29,7 @@ suggested-pkgs:
       url: "http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib"
 
 www: https://gap-packages.github.io/tomlib
-readme: README
+readme: README.md
 packageinfo: https://gap-packages.github.io/tomlib/PackageInfo.g
 
 downloads:
