@@ -62,7 +62,7 @@ Status :=
 #AcceptDate :=
 #  "MM/YYYY",
 README_URL :=
-  Concatenation( ~.PackageWWWHome, "/README" ),
+  Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL :=
   Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 AbstractHTML := Concatenation( [
