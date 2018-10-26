@@ -1,16 +1,20 @@
 name: TomLib
-version: 1.2.6
-date: 2016-11-07
+version: 1.2.7
+date: 2018-10-26
 description: |
     The GAP Library of Tables of Marks
 
 authors:
+    - name: Liam Naughton
+      url: mailto:l.naughton@wlv.ac.uk
     - name: Götz Pfeiffer
       url: mailto:goetz.pfeiffer@nuigalway.ie
 
 maintainers:
     - name: Liam Naughton
-      url: http://schmidt.nuigalway.ie
+      url: mailto:l.naughton@wlv.ac.uk
+    - name: Götz Pfeiffer
+      url: mailto:goetz.pfeiffer@nuigalway.ie
 
 GAP: ">= 4.4"
 
@@ -24,13 +28,13 @@ suggested-pkgs:
       version: ">= 1.1"
       url: "http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib"
 
-www: http://schmidt.nuigalway.ie/tomlib
+www: https://gap-packages.github.io/tomlib
 readme: README
-packageinfo: http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
+packageinfo: https://gap-packages.github.io/tomlib/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: http://schmidt.nuigalway.ie/tomlib/tomlib1r2p6.tar.gz
+      url: https://github.com/gap-packages/tomlib/releases/download/v1.2.7/tomlib-1.2.7.tar.gz
 
 abstract: |
     The package contains the <span class="pkgname">GAP</span> Library of Tables of Marks
@@ -42,24 +46,28 @@ keywords: |
     table of marks, Burnside matrix, subgroup lattice, finite simple groups, Moebius function, Euler function.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>NP16</span>]   <b class='BibAuthor'>Naughton, L. and Pfeiffer, G.</b>,
+    [<span class='BibKey'>NP18</span>]   <b class='BibAuthor'>Naughton, L. and Pfeiffer, G.</b>,
      <i class='BibTitle'>TomLib, The GAP Library of Tables of Marks,
-             Version 1.2.6</i>
-     (<span class='BibYear'>2016</span>)<br />
+             Version 1.2.7</i>
+     (<span class='BibYear'>2018</span>)<br />
     (<span class='BibNote'>GAP package</span>),
-    <span class='BibHowpublished'><a href="http://schmidt.nuigalway.ie/tomlib">http://schmidt.nuigalway.ie/tomlib</a></span>.
+    <span class='BibHowpublished'><a href="https://gap-packages.github.io/tomlib">https://gap-packages.github.io/tomlib</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ TomLib1.2.6,
+    @misc{ TomLib1.2.7,
       author =           {Naughton, L. and Pfeiffer, G.},
-      title =            {{TomLib}, The GAP Library of Tables of Marks, {V}ersion 1.2.6},
-      month =            {Nov},
-      year =             {2016},
+      title =            {{TomLib},   The   GAP  Library  of  Tables  of  Marks,
+                          {V}ersion 1.2.7},
+      month =            {Oct},
+      year =             {2018},
       note =             {GAP package},
-      howpublished =     {\href {http://schmidt.nuigalway.ie/tomlib} {\texttt{http://schmidt.nuigalway.ie/}\discretionary {}{}{}\texttt{tomlib}}},
-      keywords =         {table of marks; Burnside matrix; subgroup lattice; finite simple groups; Moebius function; Euler function},
-      printedkey =       {NP16}
+      howpublished =     {\href          {https://gap-packages.github.io/tomlib}
+                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {}{}{}\texttt{tomlib}}},
+      keywords =         {table  of  marks;  Burnside  matrix; subgroup lattice;
+                          finite simple groups; Moebius function; Euler function},
+      printedkey =       {NP18}
     }
 
