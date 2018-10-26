@@ -5,25 +5,23 @@
 SetPackageInfo( rec(
 PackageName :=
   "TomLib",
-MyVersion :=
-  "1r2p7",
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  JoinStringsWithSeparator( SplitString( ~.MyVersion, "rp" ), "." ),
+  "1.2.7",
 Date :=
 "26/10/2018",
 SourceRepository := rec(
     Type := "git",
-    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString( ~.PackageName )),
+    URL := "https://github.com/gap-packages/tomlib",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString( ~.PackageName )),
+PackageWWWHome  := "https://gap-packages.github.io/tomlib",
 README_URL      := Concatenation( ~.PackageWWWHome, "/README" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
                                  "/releases/download/v", ~.Version,
-                                 "/", LowercaseString( ~.PackageName), "-", ~.Version ),
+                                 "/tomlib-", ~.Version ),
 ArchiveFormats :=
   ".tar.gz",
 Persons := [
