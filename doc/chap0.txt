@@ -6,10 +6,10 @@
                       [1X The [5XGAP[105X Library of Tables of Marks [101X
   
   
-                                     1.2.6
+                                     1.2.7
   
   
-                                7 November 2016
+                                26 October 2018
   
   
                                  Liam Naughton
@@ -20,7 +20,6 @@
   
   Liam Naughton
       Email:    [7Xmailto:l.naughton@wlv.ac.uk[107X
-      Homepage: [7Xhttp://schmidt.nuigalway.ie[107X
       Address:  [33X[0;14YLiam Naughton[133X
                 [33X[0;14YSchool of Mathematics and Computer Science[133X
                 [33X[0;14YUniversity of Wolverhampton[133X
