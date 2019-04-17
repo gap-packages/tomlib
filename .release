@@ -1,0 +1,16 @@
+#!/bin/sh
+# This file is executed by the `release` script from
+# https://github.com/gap-system/ReleaseTools
+rm -rf .travis.yml .codecov.yml
+
+echo "Current data file disk space:"
+du -h data
+echo "Compressing data files..."
+for file in data/*.tom
+do
+    gzip "$file"
+    printf .
+done
+echo
+echo "Done compressing data file, disk space:"
+du -h data
