@@ -26,6 +26,13 @@ ArchiveFormats :=
   ".tar.gz",
 Persons := [
 rec(
+    LastName := "Merkwitz",
+    FirstNames := "Thomas",
+    IsAuthor := true,
+    IsMaintainer := false,
+    Email := "Thomas.Merkwitz@Team4.DE"
+  ),
+rec(
     LastName := "Naughton",
     FirstNames := "Liam",
     IsAuthor := true,
