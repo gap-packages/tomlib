@@ -8,9 +8,9 @@ PackageName :=
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  "1.2.7",
+  "1.2.8",
 Date :=
-"26/10/2018",
+"01/05/2019",
 SourceRepository := rec(
     Type := "git",
     URL := "https://github.com/gap-packages/tomlib",
@@ -25,6 +25,13 @@ ArchiveURL      := Concatenation( ~.SourceRepository.URL,
 ArchiveFormats :=
   ".tar.gz",
 Persons := [
+rec(
+    LastName := "Merkwitz",
+    FirstNames := "Thomas",
+    IsAuthor := true,
+    IsMaintainer := false,
+    Email := "tmez2525@web.de"
+),
 rec(
     LastName := "Naughton",
     FirstNames := "Liam",
