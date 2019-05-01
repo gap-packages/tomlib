@@ -8,8 +8,8 @@ PackageName :=
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  "1.2.7",
-Date := "26/10/2018", # dd/mm/yyyy format
+  "1.2.8",
+Date := "01/05/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 SourceRepository := rec(
     Type := "git",
@@ -30,7 +30,7 @@ rec(
     FirstNames := "Thomas",
     IsAuthor := true,
     IsMaintainer := false,
-    Email := "Thomas.Merkwitz@Team4.DE"
+    Email := "tmez2525@web.de"
   ),
 rec(
     LastName := "Naughton",
