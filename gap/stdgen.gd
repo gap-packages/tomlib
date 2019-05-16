@@ -125,7 +125,7 @@
 ##  There is no default method for an arbitrary isomorphism type,
 ##  since in general the definition of standard generators is not obvious.
 ##  <P/>
-##  The function <Ref Func="StandardGeneratorsOfGroup" BookName="ref"/>
+##  The function <Ref Func="StandardGeneratorsOfGroup"/>
 ##  can be used to find standard generators of a given group isomorphic
 ##  to <A>G</A>.
 ##  <P/>
@@ -286,7 +286,7 @@ DeclareGlobalFunction( "IsStandardGeneratorsOfGroup" );
 ##  element of <A>G</A> when called with <A>G</A>; the default is
 ##  <Ref Func="PseudoRandom" BookName="ref"/>.
 ##  <P/>
-##  In each call to <Ref Func="StandardGeneratorsOfGroup" BookName="ref"/>,
+##  In each call to <Ref Func="StandardGeneratorsOfGroup"/>,
 ##  the <C>script</C> component of <A>info</A> is scanned line by line.
 ##  <A>randfunc</A> is used to find an element of the prescribed order
 ##  whenever a definition line is met,
@@ -303,7 +303,7 @@ DeclareGlobalFunction( "IsStandardGeneratorsOfGroup" );
 ##  <!-- failure for a partial vector of candidates.-->
 ##  <!--  (then the first element of right order may be kept, for example)-->
 ##  Note that if <A>G</A> has the wrong isomorphism type then
-##  <Ref Func="StandardGeneratorsOfGroup" BookName="ref"/> returns a list of elements in
+##  <Ref Func="StandardGeneratorsOfGroup"/> returns a list of elements in
 ##  <A>G</A> that satisfy the conditions of the <C>script</C> component of
 ##  <A>info</A> if such elements exist, and does not terminate otherwise.
 ##  In the former case, obviously the returned elements need not be standard
@@ -341,11 +341,11 @@ DeclareGlobalFunction( "StandardGeneratorsOfGroup" );
 ##
 ##  <Description>
 ##  For a table of marks <A>tom</A>, a stored value of
-##  <Ref Func="StandardGeneratorsInfo" Label="for tables of marks" BookName="ref"/>
+##  <Ref Func="StandardGeneratorsInfo" Label="for tables of marks"/>
 ##  equals  the  value  of  this   attribute   for   the   underlying group
 ##  (see&nbsp;<Ref Attr="UnderlyingGroup" Label="for tables of marks" BookName="ref"/>)
 ##  of <A>tom</A>,
-##  cf.&nbsp;Section&nbsp;<Ref Sect="Standard Generators of Groups" BookName="ref"/>.
+##  cf.&nbsp;Section&nbsp;<Ref Sect="Standard Generators of Groups"/>.
 ##  <P/>
 ##  In this case, the <Ref Func="GeneratorsOfGroup" BookName="ref"/> value of the underlying
 ##  group <M>G</M> of <A>tom</A> is assumed to be in fact a list of
