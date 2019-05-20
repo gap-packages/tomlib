@@ -9,8 +9,8 @@ Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
   "1.2.8",
-Date :=
-"01/05/2019",
+Date := "01/05/2019", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 SourceRepository := rec(
     Type := "git",
     URL := "https://github.com/gap-packages/tomlib",
@@ -31,7 +31,7 @@ rec(
     IsAuthor := true,
     IsMaintainer := false,
     Email := "tmez2525@web.de"
-),
+  ),
 rec(
     LastName := "Naughton",
     FirstNames := "Liam",

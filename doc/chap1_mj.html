@@ -352,7 +352,7 @@ TableOfMarks( "5:4xA5" )
 </dl>
 <p>There is no default method for an arbitrary isomorphism type, since in general the definition of standard generators is not obvious.</p>
 
-<p>The function <code class="func">StandardGeneratorsOfGroup</code> (<span class="RefLink">???</span>) can be used to find standard generators of a given group isomorphic to <var class="Arg">G</var>.</p>
+<p>The function <code class="func">StandardGeneratorsOfGroup</code> (<a href="chap1_mj.html#X830DDDC287DFBA0A"><span class="RefLink">1.5-5</span></a>) can be used to find standard generators of a given group isomorphic to <var class="Arg">G</var>.</p>
 
 <p>The <code class="code">generators</code> and <code class="code">description</code> values, if not known, can be computed by <code class="func">HumanReadableDefinition</code> (<a href="chap1_mj.html#X7C6A2D3A8762F11B"><span class="RefLink">1.5-2</span></a>).</p>
 
@@ -429,9 +429,9 @@ rec( description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4",
 
 <p>The optional argument <var class="Arg">randfunc</var> must be a function that returns an element of <var class="Arg">G</var> when called with <var class="Arg">G</var>; the default is <code class="func">PseudoRandom</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap30_mj.html#X811B5BD47DC5356B"><span class="RefLink">Reference: PseudoRandom</span></a>).</p>
 
-<p>In each call to <code class="func">StandardGeneratorsOfGroup</code> (<span class="RefLink">???</span>), the <code class="code">script</code> component of <var class="Arg">info</var> is scanned line by line. <var class="Arg">randfunc</var> is used to find an element of the prescribed order whenever a definition line is met, and for the relation and condition lines in the <code class="code">script</code> list, the current generator candidates are checked; if a condition is not fulfilled, all candidates are thrown away, and the procedure starts again with the first line. When the conditions are fulfilled after processing the last line of the <code class="code">script</code> list, the standard generators are returned.</p>
+<p>In each call to <code class="func">StandardGeneratorsOfGroup</code>, the <code class="code">script</code> component of <var class="Arg">info</var> is scanned line by line. <var class="Arg">randfunc</var> is used to find an element of the prescribed order whenever a definition line is met, and for the relation and condition lines in the <code class="code">script</code> list, the current generator candidates are checked; if a condition is not fulfilled, all candidates are thrown away, and the procedure starts again with the first line. When the conditions are fulfilled after processing the last line of the <code class="code">script</code> list, the standard generators are returned.</p>
 
-<p>Note that if <var class="Arg">G</var> has the wrong isomorphism type then <code class="func">StandardGeneratorsOfGroup</code> (<span class="RefLink">???</span>) returns a list of elements in <var class="Arg">G</var> that satisfy the conditions of the <code class="code">script</code> component of <var class="Arg">info</var> if such elements exist, and does not terminate otherwise. In the former case, obviously the returned elements need not be standard generators of <var class="Arg">G</var>.</p>
+<p>Note that if <var class="Arg">G</var> has the wrong isomorphism type then <code class="func">StandardGeneratorsOfGroup</code> returns a list of elements in <var class="Arg">G</var> that satisfy the conditions of the <code class="code">script</code> component of <var class="Arg">info</var> if such elements exist, and does not terminate otherwise. In the former case, obviously the returned elements need not be standard generators of <var class="Arg">G</var>.</p>
 
 
 <div class="example"><pre>
@@ -456,7 +456,7 @@ true
 <h5>1.5-6 StandardGeneratorsInfo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StandardGeneratorsInfo</code>( <var class="Arg">tom</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>For a table of marks <var class="Arg">tom</var>, a stored value of <code class="func">StandardGeneratorsInfo</code> (<span class="RefLink">???</span>) equals the value of this attribute for the underlying group (see <code class="func">UnderlyingGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap70_mj.html#X81E41D3880FA6C4C"><span class="RefLink">Reference: UnderlyingGroup for tables of marks</span></a>)) of <var class="Arg">tom</var>, cf. Section <span class="RefLink">???</span>.</p>
+<p>For a table of marks <var class="Arg">tom</var>, a stored value of <code class="func">StandardGeneratorsInfo</code> equals the value of this attribute for the underlying group (see <code class="func">UnderlyingGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap70_mj.html#X81E41D3880FA6C4C"><span class="RefLink">Reference: UnderlyingGroup for tables of marks</span></a>)) of <var class="Arg">tom</var>, cf. Section <a href="chap1_mj.html#X7F8107C282BB991C"><span class="RefLink">1.5</span></a>.</p>
 
 <p>In this case, the <code class="func">GeneratorsOfGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X79C44528864044C5"><span class="RefLink">Reference: GeneratorsOfGroup</span></a>) value of the underlying group <span class="SimpleMath">\(G\)</span> of <var class="Arg">tom</var> is assumed to be in fact a list of standard generators for <span class="SimpleMath">\(G\)</span>; So one should be careful when setting the <code class="func">StandardGeneratorsInfo</code> value by hand.</p>
 

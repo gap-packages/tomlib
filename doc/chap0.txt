@@ -6,11 +6,13 @@
                       [1X The [5XGAP[105X Library of Tables of Marks [101X
   
   
-                                     1.2.7
+                                     1.2.8
   
   
-                                26 October 2018
+                                   1 May 2019
   
+  
+                                Thomas Merkwitz
   
                                  Liam Naughton
   
@@ -18,6 +20,8 @@
   
   
   
+  Thomas Merkwitz
+      Email:    [7Xmailto:tmez2525@web.de[107X
   Liam Naughton
       Email:    [7Xmailto:l.naughton@wlv.ac.uk[107X
       Address:  [33X[0;14YLiam Naughton[133X

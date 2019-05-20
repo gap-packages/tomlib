@@ -292,8 +292,8 @@
   [33X[0;0YThere  is  no  default  method  for  an arbitrary isomorphism type, since in
   general the definition of standard generators is not obvious.[133X
   
-  [33X[0;0YThe function [2XStandardGeneratorsOfGroup[102X ([14XStandardGeneratorsOfGroup???[114X) can be
-  used to find standard generators of a given group isomorphic to [3XG[103X.[133X
+  [33X[0;0YThe  function [2XStandardGeneratorsOfGroup[102X ([14X1.5-5[114X) can be used to find standard
+  generators of a given group isomorphic to [3XG[103X.[133X
   
   [33X[0;0YThe  [10Xgenerators[110X  and  [10Xdescription[110X  values,  if not known, can be computed by
   [2XHumanReadableDefinition[102X ([14X1.5-2[114X).[133X
@@ -389,20 +389,20 @@
   [33X[0;0YThe optional argument [3Xrandfunc[103X must be a function that returns an element of
   [3XG[103X when called with [3XG[103X; the default is [2XPseudoRandom[102X ([14XReference: PseudoRandom[114X).[133X
   
-  [33X[0;0YIn  each  call  to [2XStandardGeneratorsOfGroup[102X ([14XStandardGeneratorsOfGroup???[114X),
-  the  [10Xscript[110X  component  of [3Xinfo[103X is scanned line by line. [3Xrandfunc[103X is used to
-  find  an  element of the prescribed order whenever a definition line is met,
-  and  for  the  relation  and condition lines in the [10Xscript[110X list, the current
-  generator  candidates  are  checked;  if  a  condition is not fulfilled, all
-  candidates  are  thrown  away, and the procedure starts again with the first
-  line.  When  the  conditions are fulfilled after processing the last line of
-  the [10Xscript[110X list, the standard generators are returned.[133X
+  [33X[0;0YIn  each  call to [2XStandardGeneratorsOfGroup[102X, the [10Xscript[110X component of [3Xinfo[103X is
+  scanned  line by line. [3Xrandfunc[103X is used to find an element of the prescribed
+  order  whenever a definition line is met, and for the relation and condition
+  lines in the [10Xscript[110X list, the current generator candidates are checked; if a
+  condition  is  not  fulfilled,  all  candidates  are  thrown  away,  and the
+  procedure  starts  again  with  the  first  line.  When  the  conditions are
+  fulfilled  after  processing  the last line of the [10Xscript[110X list, the standard
+  generators are returned.[133X
   
   [33X[0;0YNote that if [3XG[103X has the wrong isomorphism type then [2XStandardGeneratorsOfGroup[102X
-  ([14XStandardGeneratorsOfGroup???[114X)  returns a list of elements in [3XG[103X that satisfy
-  the  conditions  of the [10Xscript[110X component of [3Xinfo[103X if such elements exist, and
-  does  not  terminate  otherwise.  In the former case, obviously the returned
-  elements need not be standard generators of [3XG[103X.[133X
+  returns  a  list  of elements in [3XG[103X that satisfy the conditions of the [10Xscript[110X
+  component  of [3Xinfo[103X if such elements exist, and does not terminate otherwise.
+  In  the  former  case,  obviously the returned elements need not be standard
+  generators of [3XG[103X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27Xa5:= AlternatingGroup( 5 );[127X[104X
@@ -425,11 +425,9 @@
   
   [33X[1;0Y[29X[2XStandardGeneratorsInfo[102X( [3Xtom[103X ) [32X attribute[133X
   
-  [33X[0;0YFor  a  table  of  marks  [3Xtom[103X,  a  stored  value  of  [2XStandardGeneratorsInfo[102X
-  ([14XStandardGeneratorsInfo,  for  tables  of marks???[114X) equals the value of this
-  attribute   for   the   underlying  group  (see [2XUnderlyingGroup[102X  ([14XReference:
-  UnderlyingGroup   for   tables   of  marks[114X))  of  [3Xtom[103X,  cf. Section [14XStandard
-  Generators of Groups???[114X.[133X
+  [33X[0;0YFor  a  table  of marks [3Xtom[103X, a stored value of [2XStandardGeneratorsInfo[102X equals
+  the  value  of  this attribute for the underlying group (see [2XUnderlyingGroup[102X
+  ([14XReference: UnderlyingGroup for tables of marks[114X)) of [3Xtom[103X, cf. Section [14X1.5[114X.[133X
   
   [33X[0;0YIn  this case, the [2XGeneratorsOfGroup[102X ([14XReference: GeneratorsOfGroup[114X) value of
   the  underlying  group  [22XG[122X of [3Xtom[103X is assumed to be in fact a list of standard
