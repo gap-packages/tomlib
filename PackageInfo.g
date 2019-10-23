@@ -1,15 +1,15 @@
 #############################################################################
-##  
+##
 ##  PackageInfo.g for the GAP 4 package TomLib                  Liam Naughton
-##  
+##
 SetPackageInfo( rec(
 PackageName :=
   "TomLib",
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  "1.2.8",
-Date := "01/05/2019", # dd/mm/yyyy format
+  "1.2.9",
+Date := "23/10/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 SourceRepository := rec(
     Type := "git",
@@ -96,7 +96,7 @@ Dependencies := rec(
   NeededOtherPackages :=
     [ ["atlasrep", ">= 1.5"] ],
   SuggestedOtherPackages :=
-    [ ["ctbllib", ">= 1.1"] ], 
+    [ ["ctbllib", ">= 1.1"] ],
   ExternalConditions :=
     []
   ),
@@ -126,6 +126,5 @@ AutoDoc := rec(
 ) );
 
 #############################################################################
-##  
+##
 #E
-
