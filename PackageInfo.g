@@ -82,7 +82,7 @@ PackageDoc := rec(
   ArchiveURLSubset :=
     [ "doc", "htm" ],
   HTMLStart :=
-    "doc/chap0.html",
+    "doc/chap0_mj.html",
   PDFFile :=
     "doc/manual.pdf",
   SixFile :=
