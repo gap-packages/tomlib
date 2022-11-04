@@ -33,18 +33,15 @@ Support
 
 If you have found important features missing or if there is a bug,
 let us know and we will try to address it in the next version of the
-GAP Library of Tables of Marks.
-Please send a short email to
-
-          Liam Naughton    <l.naughton@wlv.ac.uk>
+GAP Library of Tables of Marks. Please either use the our
+[issue tracker](https://github.com/gap-packages/tomlib/issues)
+or send a short email to Liam Naughton <l.naughton@wlv.ac.uk>.
 
 This holds in particular if you have used the GAP Library of Tables of Marks
 to solve a problem.
 
 You can also reach the GAP developers by sending an email to the general
-GAP email address for problems with GAP:
-
-                     support@gap-system.org
+GAP email address <support@gap-system.org> for problems with GAP.
 
 Unpacking
 ---------
