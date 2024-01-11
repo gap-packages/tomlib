@@ -235,8 +235,7 @@ DeclareGlobalFunction( "ScriptFromString" );
 ##  </ManSection>
 ##  <#/GAPDoc>
 ##
-DeclareGlobalVariable( "StandardGeneratorsFunctions",
-    "list of functions used in scripts, and their translations to strings" );
+BindGlobal( "StandardGeneratorsFunctions", [] );
 
 
 #############################################################################

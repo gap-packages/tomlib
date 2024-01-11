@@ -383,8 +383,6 @@ end );
 ##
 #V  StandardGeneratorsFunctions
 ##
-InstallValue( StandardGeneratorsFunctions, [] );
-
 CentralizerOrder := function( G, g ) return Size( Centralizer( G, g ) ); end;
 
 Append( StandardGeneratorsFunctions, [ CentralizerOrder, [ "|C(",,")|" ] ] );
