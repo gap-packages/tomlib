@@ -61,9 +61,7 @@
 ##  <#/GAPDoc>
 ##
 DeclareGlobalVariable( "LIBTOMKNOWN" );
-#T As soon as flushable records are supported, change the following lines!
-#T InstallFlushableValue( LIBTOMKNOWN, rec(
-InstallValue( LIBTOMKNOWN, rec(
+InstallFlushableValue( LIBTOMKNOWN, rec(
     LOADSTATUS := rec(),
     UNLOAD := true,
     MAX := 10,
