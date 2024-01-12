@@ -46,11 +46,6 @@
 ##      is it allowed to remove previously loaded library files
 ##      (is set to <K>true</K> by default),
 ##  </Item>
-##  <Mark><C>STDGEN</C> </Mark>
-##  <Item>
-##      a list describing standard generators of almost simple groups in the
-##      table of marks library.
-##  </Item>
 ##  </List>
 ##  <P/>
 ##  Additionally the names of the files already loaded occur as components of

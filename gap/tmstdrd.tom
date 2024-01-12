@@ -8,7 +8,7 @@
 ##  This file contains the descriptions of standard generators of tables of
 ##  marks in the TomLib package.
 ##
-##  Each entry in the list `LIBTOMKNOWN.STDGEN' is a list of length 4 or 6.
+##  Each entry in the list `LIBTOM_STDGEN' is a list of length 4 or 6.
 ##  - At the first position the `Identifier' value of the table of marks
 ##    is stored.
 ##  - The value at the second position is either the string "N" or a positive
@@ -36,7 +36,7 @@
 ##    Representations (w.r.t. standardization 1).
 ##
 
-LIBTOMKNOWN.STDGEN := [
+BindGlobal("LIBTOM_STDGEN", [
 
 ["A5",         1, "a, b",
                     "|a|=2, |b|=3, |ab|=5" ],
@@ -563,22 +563,22 @@ LIBTOMKNOWN.STDGEN := [
 ["Co3",        1, "a, b",
                     "|y|=9, y^3=a, |z|=20, z^5=b, |ab|=14" ],
 
-];
+]);
 
 
 #############################################################################
 ##
-#F  LIBTOMKNOWN.CheckSTDGEN( [<entry>] )
+#F  LIBTOM_CheckSTDGEN( [<entry>] )
 ##
-LIBTOMKNOWN.CheckSTDGEN:= function( arg )
+LIBTOM_CheckSTDGEN:= function( arg )
     local result, entry, name, tom, info, flag, atlasname, tomgroup, tomgens,
           check, is_std, atlasgroup, atlasgens, inforec, hom, res;
 
     result:= true;
 
     if Length( arg ) = 0 then
-      for entry in LIBTOMKNOWN.STDGEN do
-        result:= LIBTOMKNOWN.CheckSTDGEN( entry ) and result;
+      for entry in LIBTOM_STDGEN do
+        result:= LIBTOM_CheckSTDGEN( entry ) and result;
       od;
       return result;
     fi;
