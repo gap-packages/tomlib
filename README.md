@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gap-packages/tomlib.svg?branch=master)](https://travis-ci.org/gap-packages/tomlib)
+[![Build Status](https://github.com/gap-packages/tomlib/workflows/CI/badge.svg?branch=master)](https://github.com/gap-packages/tomlib/actions?query=workflow%3ACI+branch%3Amaster)
 [![Code Coverage](https://codecov.io/github/gap-packages/tomlib/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/tomlib)
 
 The GAP Library of Tables of Marks
@@ -10,20 +10,38 @@ Description
 This is the GAP Library of Tables of Marks,
 which is an add-on package for GAP 4.
 
+From the [Table of marks library documentation](https://gap-packages.github.io/tomlib/doc/chap0.html):
+
+> The concept of a *table of marks* was introduced by W. Burnside in his 1955
+> book *Theory of Groups of Finite Order*. Therefore a table of marks is
+> sometimes called a Burnside matrix. The table of marks of a finite group *G*
+> is a matrix whose rows and columns are labelled by the conjugacy classes of
+> subgroups of *G* and where for two subgroups *H* and *K* the *(H, K)*–entry
+> is the number of fixed points of *K* in the transitive action of *G* on the
+> cosets of *H* in *G*. So the table of marks characterizes the set of all
+> permutation representations of *G*. Moreover, the table of marks gives a
+> compact description of the subgroup lattice of *G*, since from the numbers
+> of fixed points the numbers of conjugates of a subgroup *K* contained in a
+> subgroup *H* can be derived. For small groups the table of marks of *G* can
+> be constructed directly in GAP by first computing the entire subgroup lattice
+> of *G*. However, for larger groups this method is unfeasible. The GAP Table
+> of Marks library provides access to several hundred tables of marks and their
+> maximal subgroups.
+
+Support
+-------
+
 If you have found important features missing or if there is a bug,
 let us know and we will try to address it in the next version of the
-GAP Library of Tables of Marks.
-Please send a short email to
-
-          Liam Naughton    <l.naughton@wlv.ac.uk>
+GAP Library of Tables of Marks. Please either use the our
+[issue tracker](https://github.com/gap-packages/tomlib/issues)
+or send a short email to Liam Naughton <l.naughton@wlv.ac.uk>.
 
 This holds in particular if you have used the GAP Library of Tables of Marks
 to solve a problem.
 
 You can also reach the GAP developers by sending an email to the general
-GAP email address for problems with GAP:
-
-                     support@gap-system.org
+GAP email address <support@gap-system.org> for problems with GAP.
 
 Unpacking
 ---------

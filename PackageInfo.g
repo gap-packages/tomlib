@@ -8,8 +8,8 @@ PackageName :=
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  "1.2.9",
-Date := "23/10/2019", # dd/mm/yyyy format
+  "1.2.10",
+Date := "12/01/2024", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 SourceRepository := rec(
     Type := "git",
@@ -82,7 +82,7 @@ PackageDoc := rec(
   ArchiveURLSubset :=
     [ "doc", "htm" ],
   HTMLStart :=
-    "doc/chap0.html",
+    "doc/chap0_mj.html",
   PDFFile :=
     "doc/manual.pdf",
   SixFile :=

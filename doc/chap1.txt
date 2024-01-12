@@ -95,7 +95,7 @@
   
   [1X1.4-1 LIBTOMKNOWN[101X
   
-  [33X[1;0Y[29X[2XLIBTOMKNOWN[102X[32X global variable[133X
+  [33X[1;0Y[29X[2XLIBTOMKNOWN[102X [32X global variable[133X
   
   [33X[0;0Y[10XLIBTOMKNOWN[110X  is  a record that controls the loading of data files of the [5XGAP[105X
   library of tables of marks. It has the following components.[133X
@@ -346,7 +346,7 @@
   
   [1X1.5-3 StandardGeneratorsFunctions[101X
   
-  [33X[1;0Y[29X[2XStandardGeneratorsFunctions[102X[32X global variable[133X
+  [33X[1;0Y[29X[2XStandardGeneratorsFunctions[102X [32X global variable[133X
   
   [33X[0;0Y[2XStandardGeneratorsFunctions[102X  is  a  list of even length. At position [22X2i-1[122X, a
   function  of two arguments is stored, which are expected to be a group and a

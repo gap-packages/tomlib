@@ -314,7 +314,7 @@ TableOfMarks( "5:4xA5" )
 
 </dd>
 <dt><strong class="Mark">a <em>relation</em> <span class="SimpleMath">[ [ i_1, i_2, ..., i_m ], <var class="Arg">slp</var>, n ]</span></strong></dt>
-<dd><p>means a check whether the result of the straight line program <var class="Arg">slp</var> (see <a href="https://www.gap-system.org/Manuals/doc/ref/chap37.html#X7DC99E4284093FBB"><span class="RefLink">Reference: Straight Line Programs</span></a>) applied to the candidates <span class="SimpleMath">g_{i_1}, g_{i_2}, ..., g_{i_m}</span> has order <span class="SimpleMath">n</span>, where the candidates <span class="SimpleMath">g_j</span> for the <span class="SimpleMath">j</span>-th standard generators must have been defined before,</p>
+<dd><p>means a check whether the result of the straight line program <var class="Arg">slp</var> (see <a href="https://www.gap-system.org/Manuals/doc/ref/chap37_mj.html#X7DC99E4284093FBB"><span class="RefLink">Reference: Straight Line Programs</span></a>) applied to the candidates <span class="SimpleMath">g_{i_1}, g_{i_2}, ..., g_{i_m}</span> has order <span class="SimpleMath">n</span>, where the candidates <span class="SimpleMath">g_j</span> for the <span class="SimpleMath">j</span>-th standard generators must have been defined before,</p>
 
 </dd>
 <dt><strong class="Mark">a <em>condition</em> <span class="SimpleMath">[ [ i_1, k_1, i_2, k_2, ..., i_m, k_m ], f, v ]</span></strong></dt>
@@ -335,7 +335,7 @@ TableOfMarks( "5:4xA5" )
 
 </dd>
 <dt><strong class="Mark"><code class="code">classnames</code></strong></dt>
-<dd><p>a list of strings, the <span class="SimpleMath">i</span>-th entry being the name of the conjugacy class containing the <span class="SimpleMath">i</span>-th standard generator, according to the <strong class="pkg">Atlas</strong> character table of the group (see <code class="func">ClassNames</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap71.html#X804CFD597C795801"><span class="RefLink">Reference: ClassNames</span></a>)), and</p>
+<dd><p>a list of strings, the <span class="SimpleMath">i</span>-th entry being the name of the conjugacy class containing the <span class="SimpleMath">i</span>-th standard generator, according to the <strong class="pkg">Atlas</strong> character table of the group (see <code class="func">ClassNames</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap71_mj.html#X804CFD597C795801"><span class="RefLink">Reference: ClassNames</span></a>)), and</p>
 
 </dd>
 <dt><strong class="Mark"><code class="code">ATLAS</code></strong></dt>
@@ -424,7 +424,7 @@ rec( description := "|a|=2, |b|=3, |C(b)|=9, |ab|=13, |ababb|=4",
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StandardGeneratorsOfGroup</code>( <var class="Arg">info</var>, <var class="Arg">G</var>[, <var class="Arg">randfunc</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Let <var class="Arg">info</var> be a record that is valid as value of <code class="func">StandardGeneratorsInfo</code> (<a href="chap1.html#X7984E27078B20557"><span class="RefLink">1.5-1</span></a>), and <var class="Arg">G</var> a group of the isomorphism type for which <var class="Arg">info</var> describes standard generators. In this case, <code class="func">StandardGeneratorsOfGroup</code> returns a list of standard generators of <var class="Arg">G</var>, see Section <a href="chap1.html#X7F8107C282BB991C"><span class="RefLink">1.5</span></a>.</p>
 
-<p>The optional argument <var class="Arg">randfunc</var> must be a function that returns an element of <var class="Arg">G</var> when called with <var class="Arg">G</var>; the default is <code class="func">PseudoRandom</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap30.html#X811B5BD47DC5356B"><span class="RefLink">Reference: PseudoRandom</span></a>).</p>
+<p>The optional argument <var class="Arg">randfunc</var> must be a function that returns an element of <var class="Arg">G</var> when called with <var class="Arg">G</var>; the default is <code class="func">PseudoRandom</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap30_mj.html#X811B5BD47DC5356B"><span class="RefLink">Reference: PseudoRandom</span></a>).</p>
 
 <p>In each call to <code class="func">StandardGeneratorsOfGroup</code>, the <code class="code">script</code> component of <var class="Arg">info</var> is scanned line by line. <var class="Arg">randfunc</var> is used to find an element of the prescribed order whenever a definition line is met, and for the relation and condition lines in the <code class="code">script</code> list, the current generator candidates are checked; if a condition is not fulfilled, all candidates are thrown away, and the procedure starts again with the first line. When the conditions are fulfilled after processing the last line of the <code class="code">script</code> list, the standard generators are returned.</p>
 
@@ -453,9 +453,9 @@ true
 <h5>1.5-6 StandardGeneratorsInfo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StandardGeneratorsInfo</code>( <var class="Arg">tom</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>For a table of marks <var class="Arg">tom</var>, a stored value of <code class="func">StandardGeneratorsInfo</code> equals the value of this attribute for the underlying group (see <code class="func">UnderlyingGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap70.html#X81E41D3880FA6C4C"><span class="RefLink">Reference: UnderlyingGroup for tables of marks</span></a>)) of <var class="Arg">tom</var>, cf. Section <a href="chap1.html#X7F8107C282BB991C"><span class="RefLink">1.5</span></a>.</p>
+<p>For a table of marks <var class="Arg">tom</var>, a stored value of <code class="func">StandardGeneratorsInfo</code> equals the value of this attribute for the underlying group (see <code class="func">UnderlyingGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap70_mj.html#X81E41D3880FA6C4C"><span class="RefLink">Reference: UnderlyingGroup for tables of marks</span></a>)) of <var class="Arg">tom</var>, cf. Section <a href="chap1.html#X7F8107C282BB991C"><span class="RefLink">1.5</span></a>.</p>
 
-<p>In this case, the <code class="func">GeneratorsOfGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap39.html#X79C44528864044C5"><span class="RefLink">Reference: GeneratorsOfGroup</span></a>) value of the underlying group <span class="SimpleMath">G</span> of <var class="Arg">tom</var> is assumed to be in fact a list of standard generators for <span class="SimpleMath">G</span>; So one should be careful when setting the <code class="func">StandardGeneratorsInfo</code> value by hand.</p>
+<p>In this case, the <code class="func">GeneratorsOfGroup</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X79C44528864044C5"><span class="RefLink">Reference: GeneratorsOfGroup</span></a>) value of the underlying group <span class="SimpleMath">G</span> of <var class="Arg">tom</var> is assumed to be in fact a list of standard generators for <span class="SimpleMath">G</span>; So one should be careful when setting the <code class="func">StandardGeneratorsInfo</code> value by hand.</p>
 
 <p>There is no default method to compute the <code class="func">StandardGeneratorsInfo</code> value of a table of marks if it is not yet stored.</p>
 

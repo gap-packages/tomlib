@@ -3,8 +3,8 @@
   [1XReferences[101X
   
   [[20XBur55[120X]  [16XBurnside,  W.[116X, [17XTheory of groups of finite order[117X, Dover Publications
-  Inc.,  New  York  (1955),  xxiv+512 pages, ((Unabridged republication of the
-  second edition, published in 1911)).
+  Inc.,  New  York  (1955),  xxiv+512  pages, (Unabridged republication of the
+  second edition, published in 1911).
   
   [[20XWil96[120X]  [16XWilson,  R.  A.[116X, [17XStandard generators for sporadic simple groups[117X, [18XJ.
   Algebra[118X, [19X184[119X, 2 (1996), 505–515.
