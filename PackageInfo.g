@@ -8,7 +8,7 @@ PackageName :=
 Subtitle :=
   "The GAP Library of Tables of Marks",
 Version :=
-  "1.2.10",
+  "1.2.11",
 Date := "12/01/2024", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 SourceRepository := rec(
