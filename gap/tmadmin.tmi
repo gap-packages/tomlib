@@ -260,7 +260,7 @@ InstallGlobalFunction( LIBTOM, function( arg )
       record.UnderlyingGroup:= GroupWithGenerators( record.UnderlyingGroup );
 
       # If standard generators are known then store them in the table.
-      for entry in LIBTOMKNOWN.STDGEN do
+      for entry in LIBTOM_STDGEN do
         if record.Identifier = entry[1] then
           record.StandardGeneratorsInfo:= [ rec(
               generators  := entry[3],

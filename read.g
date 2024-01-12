@@ -6,8 +6,8 @@
 ##
 
 # Read the implementation part.
-ReadPackage( "tomlib", "gap/tmadmin.tmi" );
 ReadPackage( "tomlib", "gap/tmstdrd.tom" );
+ReadPackage( "tomlib", "gap/tmadmin.tmi" );
 #ReadPackage( "tomlib", "gap/test.gi" );
 
 ReadPackage( "tomlib", "gap/stdgen.gi" );
