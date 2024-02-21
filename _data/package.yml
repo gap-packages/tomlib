@@ -1,5 +1,6 @@
 name: TomLib
-version: 1.2.11
+version: "1.2.11"
+license: "GPL-2.0-or-later"
 date: 2024-01-12
 description: |
     The GAP Library of Tables of Marks

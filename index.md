@@ -10,6 +10,10 @@ The current version of this package is version {{site.data.package.version}}, re
 For more information, please refer to [the package manual]({{site.data.package.doc-html}}).
 There is also a [README](README.html) file.
 
+{% if site.data.package.license %}
+  License: [{{ site.data.package.license }}](https://spdx.org/licenses/{{ site.data.package.license }})
+{% endif %}
+
 ## Dependencies
 
 This package requires GAP version {{site.data.package.GAP}}
@@ -32,12 +36,14 @@ The following additional GAP packages are not required, but suggested:
 ## Author{% if site.data.package.authors.size != 1 %}s{% endif %}
 {% for person in site.data.package.authors %}
  {% if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}
+ {%- if forloop.last -%}.{% else %}, {%- endif -%}
 {% endfor %}
 
 {% if site.data.package.contributors and site.data.package.contributors.size > 0 %}
 ## Contributor{% if site.data.package.contributors.size != 1 %}s{% endif %}
  {% for person in site.data.package.contributors %}
   {% if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}
+  {%- if forloop.last -%}.{% else %}, {%- endif -%}
  {% endfor %}
 {% endif %}
 
