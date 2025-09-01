@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/gap-packages/tomlib/workflows/CI/badge.svg?branch=master)](https://github.com/gap-packages/tomlib/actions?query=workflow%3ACI+branch%3Amaster)
+[![Build Status](https://github.com/gap-packages/tomlib/actions/workflows/CI.yml/badge.svg)](https://github.com/gap-packages/tomlib/actions/workflows/CI.yml)
 [![Code Coverage](https://codecov.io/github/gap-packages/tomlib/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/tomlib)
 
 The GAP Library of Tables of Marks
