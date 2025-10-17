@@ -221,7 +221,7 @@ DeclareGlobalFunction( "AllLibTomNames" );
 ##
 ##  <#GAPDoc Label="NamesLibTom">
 ##  <ManSection>
-##  <Attr Name="NamesLibTom" Arg='string'/>
+##  <Attr Name="NamesLibTom" Arg='string' Label="NamesLibTomString"/>
 ##  <Attr Name="NamesLibTom" Arg='tom'/>
 ##
 ##  <Returns>
@@ -245,9 +245,10 @@ DeclareAttribute( "NamesLibTom", IsString );
 ##  <#GAPDoc Label="NotifiedFusionsOfLibTom">
 ##  <ManSection>
 ##  <Attr Name="NotifiedFusionsOfLibTom" Arg='tom'/>
-##  <Attr Name="NotifiedFusionsOfLibTom" Arg='string'/>
+##  <Attr Name="NotifiedFusionsOfLibTom" Arg='string'
+##        Label="NotifiedFusionsOfLibTomString"/>
 ##  <Attr Name="FusionsOfLibTom" Arg='tom'/>
-##  <Attr Name="FusionsOfLibTom" Arg='string'/>
+##  <Attr Name="FusionsOfLibTom" Arg='string' Label="FusionsOfLibTomString"/>
 ##
 ##  <Description>
 ##  Are there any fusions from the library table of marks <A>tom</A> or  the
@@ -279,9 +280,10 @@ DeclareAttribute( "FusionsOfLibTom", IsString );
 ##  <#GAPDoc Label="NotifiedFusionsToLibTom">
 ##  <ManSection>
 ##  <Attr Name="NotifiedFusionsToLibTom" Arg='tom'/>
-##  <Attr Name="NotifiedFusionsToLibTom" Arg='string'/>
+##  <Attr Name="NotifiedFusionsToLibTom" Arg='string'
+##        Label="NotifiedFusionsToLibTomString"/>
 ##  <Attr Name="FusionsToLibTom" Arg='tom'/>
-##  <Attr Name="FusionsToLibTom" Arg='string'/>
+##  <Attr Name="FusionsToLibTom" Arg='string' Label="FusionsToLibTomString"/>
 ##
 ##  <Description>
 ##  Are there any fusions from other library table of marks to <A>tom</A> or the
