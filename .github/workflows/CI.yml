@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        only-needed: [ "true", "false" ]
+        only-needed: [ "true", "false" ]  # need to split it to avoid disk storage issues
         gap-branch:
           - master
           - stable-4.15
