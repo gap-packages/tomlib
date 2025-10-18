@@ -18,11 +18,12 @@ concurrency:
 jobs:
   # The CI test job
   test:
-    name: ${{ matrix.gap-branch }}
+    name: "${{ matrix.gap-branch }} (only-needed: ${{ matrix.only-needed }})"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+        only-needed: [ "true", "false" ]  # need to split it to avoid disk storage issues
         gap-branch:
           - master
           - stable-4.15
@@ -40,9 +41,8 @@ jobs:
           GAPBRANCH: ${{ matrix.gap-branch }}
       - uses: gap-actions/build-pkg@v1
       - uses: gap-actions/run-pkg-tests@v3
-      - uses: gap-actions/run-pkg-tests@v3
         with:
-          only-needed: true
+          only-needed: ${{ matrix.only-needed }}
       - uses: gap-actions/process-coverage@v2
       - uses: codecov/codecov-action@v5
         with:
